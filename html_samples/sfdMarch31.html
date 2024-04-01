@@ -1,0 +1,2492 @@
+<meta http-equiv="refresh" content="60">
+<html>
+<head>
+    
+<title>Seattle Fire Real-Time 911</title>
+<link REL="stylesheet" HREF="fontStyles.css" TYPE="text/css">
+
+
+<script Language="javascript">
+<!--
+
+	var ltgray = "#E0E0E0";
+	var white = "#FFFFFF";
+
+	// Change row color when MouseOver occurs
+	function rowOn(obj)
+	{
+		obj.style.backgroundColor = ltgray;
+	}
+	
+	function rowOff(obj)	
+	{
+		obj.style.backgroundColor = white;
+	}
+//-->
+</script>
+<script src="/gatc/www-gatc.js"></script>
+
+</head>
+<body leftmargin=0 topmargin=0 marginwidth=0 marginheight=0>
+
+ 
+<table width="100%" bgcolor=#FFFFFF border=0 cellspacing=0 cellpadding=4>
+  <tr>
+  	<td class="regtext" width=100% colspan="6">
+      <table border="0" cellspacing="0" width="100%">
+         <tr>
+            <td width="19%" class="regtext">
+			<img border="0" src="grsq.gif"> = Active Incident</td>
+            <td width="25%" class="regtext">
+			<img border="0" src="blsq.gif"> = Closed Incident</td>
+            <td width="18%" class="regtext">&nbsp;</td>
+            <td width="38%" class="regtext">
+       			&nbsp;Automatic Refresh in:  
+				<script language="JavaScript">
+					var dt = new Date();
+					TargetDate = dt.setSeconds(dt.getSeconds() + 60);
+					BackColor = "#999966";
+					ForeColor = "navy";
+					CountActive = true;
+					DisplayFormat = "%%S%%";
+					FinishMessage = "";
+				</script>
+				<script language="JavaScript" src="autoRefresh.js"></script>
+				&nbsp;<span class="regsmall">Seconds</span>
+			
+			  </td>
+         </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+  	<td class="regbold" width=16%>Date/Time</td>
+  	<td class="regbold" width=10%>Incident #</td>
+  	<td class="regbold" width=7%>Level</td>
+  	<td class="regbold" width=17%>Units</td>
+  	<td class="regbold" width=36%>Location</td>
+  	<td class="regbold" width=14%>Type</td>
+  </tr>
+  <tr>
+  	<td colspan="6">
+  	
+  		<table width="100%" border="0" cellpadding="1" bgcolor="#990000">
+  			<tr>
+  				<td valign="top">
+    				<table width="100%" border=0 cellpadding="2" cellspacing="0" bgcolor="#FFFFFF">
+    					
+    
+        <tr id=row_1 onMouseOver='rowOn(row_1)' onMouseOut='rowOff(row_1)'>
+            <td class="active" width=16% valign="top">3/31/2024 6:33:28 PM</td>
+            <td class="active" width=10% valign="top">F240044223</td>
+            <td class="active" width=7% valign="top">1</td>
+            <td class="active" width=17% valign="top">E35</td>
+            <td class="active" width=36% valign="top">10000 Holman Rd Nw</td>
+            <td class="active" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_2 onMouseOver='rowOn(row_2)' onMouseOut='rowOff(row_2)'>
+            <td class="active" width=16% valign="top">3/31/2024 6:32:39 PM</td>
+            <td class="active" width=10% valign="top">F240044224</td>
+            <td class="active" width=7% valign="top">1</td>
+            <td class="active" width=17% valign="top">L1</td>
+            <td class="active" width=36% valign="top">104 12th Ave</td>
+            <td class="active" width=14% valign="top">Rescue Elevator</td>
+        </tr>
+      
+        <tr id=row_3 onMouseOver='rowOn(row_3)' onMouseOut='rowOff(row_3)'>
+            <td class="active" width=16% valign="top">3/31/2024 6:20:17 PM</td>
+            <td class="active" width=10% valign="top">F240044219</td>
+            <td class="active" width=7% valign="top">1</td>
+            <td class="active" width=17% valign="top">E40</td>
+            <td class="active" width=36% valign="top">2519 NE 95TH ST</td>
+            <td class="active" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_4 onMouseOver='rowOn(row_4)' onMouseOut='rowOff(row_4)'>
+            <td class="active" width=16% valign="top">3/31/2024 6:30:18 PM</td>
+            <td class="active" width=10% valign="top">F240044222</td>
+            <td class="active" width=7% valign="top">1</td>
+            <td class="active" width=17% valign="top">E25</td>
+            <td class="active" width=36% valign="top">1512 Summit Ave</td>
+            <td class="active" width=14% valign="top">Medic Response, 6 per Rule</td>
+        </tr>
+      
+        <tr id=row_7 onMouseOver='rowOn(row_7)' onMouseOut='rowOff(row_7)'>
+            <td class="active" width=16% valign="top">3/31/2024 6:30:18 PM</td>
+            <td class="active" width=10% valign="top">F240044222</td>
+            <td class="active" width=7% valign="top">1</td>
+            <td class="active" width=17% valign="top">A26 L10 M10</td>
+            <td class="active" width=36% valign="top">1512 Summit Ave</td>
+            <td class="active" width=14% valign="top">Medic Response, 6 per Rule</td>
+        </tr>
+      
+        <tr id=row_10 onMouseOver='rowOn(row_10)' onMouseOut='rowOff(row_10)'>
+            <td class="active" width=16% valign="top">3/31/2024 6:20:03 PM</td>
+            <td class="active" width=10% valign="top">F240044220</td>
+            <td class="active" width=7% valign="top">1</td>
+            <td class="active" width=17% valign="top">A4 E2 M10</td>
+            <td class="active" width=36% valign="top">205 Pine St</td>
+            <td class="active" width=14% valign="top">Medic Response, Overdose</td>
+        </tr>
+      
+        <tr id=row_11 onMouseOver='rowOn(row_11)' onMouseOut='rowOff(row_11)'>
+            <td class="active" width=16% valign="top">3/31/2024 6:19:23 PM</td>
+            <td class="active" width=10% valign="top">F240044218</td>
+            <td class="active" width=7% valign="top">1</td>
+            <td class="active" width=17% valign="top">A2</td>
+            <td class="active" width=36% valign="top">400 Pine St</td>
+            <td class="active" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_12 onMouseOver='rowOn(row_12)' onMouseOut='rowOff(row_12)'>
+            <td class="active" width=16% valign="top">3/31/2024 6:19:23 PM</td>
+            <td class="active" width=10% valign="top">F240044218</td>
+            <td class="active" width=7% valign="top">1</td>
+            <td class="active" width=17% valign="top">A4</td>
+            <td class="active" width=36% valign="top">400 Pine St</td>
+            <td class="active" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_13 onMouseOver='rowOn(row_13)' onMouseOut='rowOff(row_13)'>
+            <td class="closed" width=16% valign="top">3/31/2024 6:12:33 PM</td>
+            <td class="closed" width=10% valign="top">F240044216</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E41</td>
+            <td class="closed" width=36% valign="top">2488 Crestmont Pl W</td>
+            <td class="closed" width=14% valign="top">Automatic Medical Alarm</td>
+        </tr>
+      
+        <tr id=row_14 onMouseOver='rowOn(row_14)' onMouseOut='rowOff(row_14)'>
+            <td class="active" width=16% valign="top">3/31/2024 6:13:29 PM</td>
+            <td class="active" width=10% valign="top">F240044217</td>
+            <td class="active" width=7% valign="top">1</td>
+            <td class="active" width=17% valign="top">A25</td>
+            <td class="active" width=36% valign="top">525 Bellevue Ave E</td>
+            <td class="active" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_15 onMouseOver='rowOn(row_15)' onMouseOut='rowOff(row_15)'>
+            <td class="closed" width=16% valign="top">3/31/2024 6:06:39 PM</td>
+            <td class="closed" width=10% valign="top">F240044213</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E38</td>
+            <td class="closed" width=36% valign="top">6521 30th Ave Ne</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_16 onMouseOver='rowOn(row_16)' onMouseOut='rowOff(row_16)'>
+            <td class="closed" width=16% valign="top">3/31/2024 6:04:14 PM</td>
+            <td class="closed" width=10% valign="top">F240044210</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E11</td>
+            <td class="closed" width=36% valign="top">6955 Delridge Way Sw</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_19 onMouseOver='rowOn(row_19)' onMouseOut='rowOff(row_19)'>
+            <td class="active" width=16% valign="top">3/31/2024 6:03:29 PM</td>
+            <td class="active" width=10% valign="top">F240044209</td>
+            <td class="active" width=7% valign="top">1</td>
+            <td class="active" width=17% valign="top">A26 E25 M17</td>
+            <td class="active" width=36% valign="top">Boylston Ave E / E Olive Way</td>
+            <td class="active" width=14% valign="top">Medic Response, 7 per Rule</td>
+        </tr>
+      
+        <tr id=row_20 onMouseOver='rowOn(row_20)' onMouseOut='rowOff(row_20)'>
+            <td class="closed" width=16% valign="top">3/31/2024 5:55:05 PM</td>
+            <td class="closed" width=10% valign="top">F240044206</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E30</td>
+            <td class="closed" width=36% valign="top">4412 Rainier Ave S</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_21 onMouseOver='rowOn(row_21)' onMouseOut='rowOff(row_21)'>
+            <td class="closed" width=16% valign="top">3/31/2024 5:54:57 PM</td>
+            <td class="closed" width=10% valign="top">F240044205</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A26</td>
+            <td class="closed" width=36% valign="top">1401 Broadway</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_23 onMouseOver='rowOn(row_23)' onMouseOut='rowOff(row_23)'>
+            <td class="closed" width=16% valign="top">3/31/2024 5:53:25 PM</td>
+            <td class="closed" width=10% valign="top">F240044204</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A4 M10</td>
+            <td class="closed" width=36% valign="top">3028 Western Ave</td>
+            <td class="closed" width=14% valign="top">Medic Response</td>
+        </tr>
+      
+        <tr id=row_24 onMouseOver='rowOn(row_24)' onMouseOut='rowOff(row_24)'>
+            <td class="closed" width=16% valign="top">3/31/2024 5:49:04 PM</td>
+            <td class="closed" width=10% valign="top">F240044202</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E22</td>
+            <td class="closed" width=36% valign="top">2354 Yale Ave E</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_25 onMouseOver='rowOn(row_25)' onMouseOut='rowOff(row_25)'>
+            <td class="active" width=16% valign="top">3/31/2024 5:42:30 PM</td>
+            <td class="active" width=10% valign="top">F240044200</td>
+            <td class="active" width=7% valign="top">1</td>
+            <td class="active" width=17% valign="top">E27</td>
+            <td class="active" width=36% valign="top">Nb I5 At Mid Boeing Field</td>
+            <td class="active" width=14% valign="top">Medic Response</td>
+        </tr>
+      
+        <tr id=row_26 onMouseOver='rowOn(row_26)' onMouseOut='rowOff(row_26)'>
+            <td class="active" width=16% valign="top">3/31/2024 5:42:30 PM</td>
+            <td class="active" width=10% valign="top">F240044200</td>
+            <td class="active" width=7% valign="top">1</td>
+            <td class="active" width=17% valign="top">M1</td>
+            <td class="active" width=36% valign="top">Nb I5 At Mid Boeing Field</td>
+            <td class="active" width=14% valign="top">Medic Response</td>
+        </tr>
+      
+        <tr id=row_29 onMouseOver='rowOn(row_29)' onMouseOut='rowOff(row_29)'>
+            <td class="active" width=16% valign="top">3/31/2024 5:42:30 PM</td>
+            <td class="active" width=10% valign="top">F240044200</td>
+            <td class="active" width=7% valign="top">1</td>
+            <td class="active" width=17% valign="top">A14 E26 E33</td>
+            <td class="active" width=36% valign="top">Nb I5 At Mid Boeing Field</td>
+            <td class="active" width=14% valign="top">Medic Response</td>
+        </tr>
+      
+        <tr id=row_30 onMouseOver='rowOn(row_30)' onMouseOut='rowOff(row_30)'>
+            <td class="closed" width=16% valign="top">3/31/2024 5:43:40 PM</td>
+            <td class="closed" width=10% valign="top">F240044199</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E21</td>
+            <td class="closed" width=36% valign="top">Aurora Ave N / N 84th St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_31 onMouseOver='rowOn(row_31)' onMouseOut='rowOff(row_31)'>
+            <td class="closed" width=16% valign="top">3/31/2024 5:36:20 PM</td>
+            <td class="closed" width=10% valign="top">F240044198</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A10</td>
+            <td class="closed" width=36% valign="top">910 Marion St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_32 onMouseOver='rowOn(row_32)' onMouseOut='rowOff(row_32)'>
+            <td class="closed" width=16% valign="top">3/31/2024 5:35:52 PM</td>
+            <td class="closed" width=10% valign="top">F240044197</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E30</td>
+            <td class="closed" width=36% valign="top">4215 Rainier Ave S</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_33 onMouseOver='rowOn(row_33)' onMouseOut='rowOff(row_33)'>
+            <td class="closed" width=16% valign="top">3/31/2024 5:32:17 PM</td>
+            <td class="closed" width=10% valign="top">F240044195</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E27</td>
+            <td class="closed" width=36% valign="top">7200 East Marginal Way S</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_35 onMouseOver='rowOn(row_35)' onMouseOut='rowOff(row_35)'>
+            <td class="closed" width=16% valign="top">3/31/2024 5:28:15 PM</td>
+            <td class="closed" width=10% valign="top">F240044194</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E10 L1</td>
+            <td class="closed" width=36% valign="top">607 3rd Ave</td>
+            <td class="closed" width=14% valign="top">Auto Fire Alarm</td>
+        </tr>
+      
+        <tr id=row_36 onMouseOver='rowOn(row_36)' onMouseOut='rowOff(row_36)'>
+            <td class="closed" width=16% valign="top">3/31/2024 5:22:23 PM</td>
+            <td class="closed" width=10% valign="top">F240044193</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A31</td>
+            <td class="closed" width=36% valign="top">1340 N 115TH ST</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_37 onMouseOver='rowOn(row_37)' onMouseOut='rowOff(row_37)'>
+            <td class="closed" width=16% valign="top">3/31/2024 5:20:06 PM</td>
+            <td class="closed" width=10% valign="top">F240044191</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E28</td>
+            <td class="closed" width=36% valign="top">3815 S Othello St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_39 onMouseOver='rowOn(row_39)' onMouseOut='rowOff(row_39)'>
+            <td class="closed" width=16% valign="top">3/31/2024 5:20:47 PM</td>
+            <td class="closed" width=10% valign="top">F240044192</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E6 L3</td>
+            <td class="closed" width=36% valign="top">2603 S Jackson St</td>
+            <td class="closed" width=14% valign="top">2RED - 1 + 1</td>
+        </tr>
+      
+        <tr id=row_41 onMouseOver='rowOn(row_41)' onMouseOut='rowOff(row_41)'>
+            <td class="closed" width=16% valign="top">3/31/2024 5:16:07 PM</td>
+            <td class="closed" width=10% valign="top">F240044190</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E18 L8</td>
+            <td class="closed" width=36% valign="top">1423 Nw 61st St</td>
+            <td class="closed" width=14% valign="top">Alarm Bell</td>
+        </tr>
+      
+        <tr id=row_42 onMouseOver='rowOn(row_42)' onMouseOut='rowOff(row_42)'>
+            <td class="closed" width=16% valign="top">3/31/2024 5:14:45 PM</td>
+            <td class="closed" width=10% valign="top">F240044189</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E36</td>
+            <td class="closed" width=36% valign="top">2821 Sw Yancy St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_43 onMouseOver='rowOn(row_43)' onMouseOut='rowOff(row_43)'>
+            <td class="closed" width=16% valign="top">3/31/2024 5:05:50 PM</td>
+            <td class="closed" width=10% valign="top">F240044186</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E13</td>
+            <td class="closed" width=36% valign="top">3416 14th Ave S</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_44 onMouseOver='rowOn(row_44)' onMouseOut='rowOff(row_44)'>
+            <td class="closed" width=16% valign="top">3/31/2024 4:54:56 PM</td>
+            <td class="closed" width=10% valign="top">F240044185</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A5</td>
+            <td class="closed" width=36% valign="top">1301 E YESLER WAY</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_45 onMouseOver='rowOn(row_45)' onMouseOut='rowOff(row_45)'>
+            <td class="closed" width=16% valign="top">3/31/2024 4:51:37 PM</td>
+            <td class="closed" width=10% valign="top">F240044184</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E30</td>
+            <td class="closed" width=36% valign="top">2700 Rainier Ave S</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_47 onMouseOver='rowOn(row_47)' onMouseOut='rowOff(row_47)'>
+            <td class="active" width=16% valign="top">3/31/2024 4:47:36 PM</td>
+            <td class="active" width=10% valign="top">F240044182</td>
+            <td class="active" width=7% valign="top">1</td>
+            <td class="active" width=17% valign="top">E11 L13</td>
+            <td class="active" width=36% valign="top">9000 20th Ave Sw</td>
+            <td class="active" width=14% valign="top">Advised Incident</td>
+        </tr>
+      
+        <tr id=row_48 onMouseOver='rowOn(row_48)' onMouseOut='rowOff(row_48)'>
+            <td class="closed" width=16% valign="top">3/31/2024 4:44:56 PM</td>
+            <td class="closed" width=10% valign="top">F240044181</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A4</td>
+            <td class="closed" width=36% valign="top">301 Pike St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_49 onMouseOver='rowOn(row_49)' onMouseOut='rowOff(row_49)'>
+            <td class="closed" width=16% valign="top">3/31/2024 4:43:48 PM</td>
+            <td class="closed" width=10% valign="top">F240044180</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E39</td>
+            <td class="closed" width=36% valign="top">13730 Lake City Way Ne</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_50 onMouseOver='rowOn(row_50)' onMouseOut='rowOff(row_50)'>
+            <td class="closed" width=16% valign="top">3/31/2024 4:21:18 PM</td>
+            <td class="closed" width=10% valign="top">F240044170</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">M28</td>
+            <td class="closed" width=36% valign="top">5536 S Orcas St</td>
+            <td class="closed" width=14% valign="top">Medic Response</td>
+        </tr>
+      
+        <tr id=row_52 onMouseOver='rowOn(row_52)' onMouseOut='rowOff(row_52)'>
+            <td class="closed" width=16% valign="top">3/31/2024 4:34:33 PM</td>
+            <td class="closed" width=10% valign="top">F240044178</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A5 M10</td>
+            <td class="closed" width=36% valign="top">1530 3rd Ave</td>
+            <td class="closed" width=14% valign="top">Medic Response</td>
+        </tr>
+      
+        <tr id=row_53 onMouseOver='rowOn(row_53)' onMouseOut='rowOff(row_53)'>
+            <td class="closed" width=16% valign="top">3/31/2024 4:32:14 PM</td>
+            <td class="closed" width=10% valign="top">F240044177</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A2</td>
+            <td class="closed" width=36% valign="top">3rd Ave / Pine St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_54 onMouseOver='rowOn(row_54)' onMouseOut='rowOff(row_54)'>
+            <td class="closed" width=16% valign="top">3/31/2024 4:31:20 PM</td>
+            <td class="closed" width=10% valign="top">F240044176</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E38</td>
+            <td class="closed" width=36% valign="top">4020 Ne 55th St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_55 onMouseOver='rowOn(row_55)' onMouseOut='rowOff(row_55)'>
+            <td class="closed" width=16% valign="top">3/31/2024 4:25:13 PM</td>
+            <td class="closed" width=10% valign="top">F240044175</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A4</td>
+            <td class="closed" width=36% valign="top">116 Stewart St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_57 onMouseOver='rowOn(row_57)' onMouseOut='rowOff(row_57)'>
+            <td class="closed" width=16% valign="top">3/31/2024 4:24:33 PM</td>
+            <td class="closed" width=10% valign="top">F240044173</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E33 R1</td>
+            <td class="closed" width=36% valign="top">9201 Rainier Ave S</td>
+            <td class="closed" width=14% valign="top">Auto Fire Alarm</td>
+        </tr>
+      
+        <tr id=row_58 onMouseOver='rowOn(row_58)' onMouseOut='rowOff(row_58)'>
+            <td class="closed" width=16% valign="top">3/31/2024 4:21:18 PM</td>
+            <td class="closed" width=10% valign="top">F240044170</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">M28</td>
+            <td class="closed" width=36% valign="top">5536 S Orcas St</td>
+            <td class="closed" width=14% valign="top">Medic Response</td>
+        </tr>
+      
+        <tr id=row_59 onMouseOver='rowOn(row_59)' onMouseOut='rowOff(row_59)'>
+            <td class="closed" width=16% valign="top">3/31/2024 4:20:45 PM</td>
+            <td class="closed" width=10% valign="top">F240044171</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">L12</td>
+            <td class="closed" width=36% valign="top">3800 S Othello St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_60 onMouseOver='rowOn(row_60)' onMouseOut='rowOff(row_60)'>
+            <td class="closed" width=16% valign="top">3/31/2024 4:16:26 PM</td>
+            <td class="closed" width=10% valign="top">F240044169</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E32</td>
+            <td class="closed" width=36% valign="top">42nd Ave Sw / Sw Edmunds St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_61 onMouseOver='rowOn(row_61)' onMouseOut='rowOff(row_61)'>
+            <td class="closed" width=16% valign="top">3/31/2024 4:21:18 PM</td>
+            <td class="closed" width=10% valign="top">F240044170</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E28</td>
+            <td class="closed" width=36% valign="top">5536 S Orcas St</td>
+            <td class="closed" width=14% valign="top">Medic Response</td>
+        </tr>
+      
+        <tr id=row_62 onMouseOver='rowOn(row_62)' onMouseOut='rowOff(row_62)'>
+            <td class="closed" width=16% valign="top">3/31/2024 4:11:51 PM</td>
+            <td class="closed" width=10% valign="top">F240044168</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A10</td>
+            <td class="closed" width=36% valign="top">913 S Jackson St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_63 onMouseOver='rowOn(row_63)' onMouseOut='rowOff(row_63)'>
+            <td class="closed" width=16% valign="top">3/31/2024 4:00:08 PM</td>
+            <td class="closed" width=10% valign="top">F240044167</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E18</td>
+            <td class="closed" width=36% valign="top">1909 Nw Market St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_64 onMouseOver='rowOn(row_64)' onMouseOut='rowOff(row_64)'>
+            <td class="closed" width=16% valign="top">3/31/2024 3:57:56 PM</td>
+            <td class="closed" width=10% valign="top">F240044166</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A31</td>
+            <td class="closed" width=36% valign="top">N 105th St / Aurora Ave N</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_65 onMouseOver='rowOn(row_65)' onMouseOut='rowOff(row_65)'>
+            <td class="closed" width=16% valign="top">3/31/2024 3:52:56 PM</td>
+            <td class="closed" width=10% valign="top">F240044165</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E8</td>
+            <td class="closed" width=36% valign="top">1311 2nd Ave W</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_68 onMouseOver='rowOn(row_68)' onMouseOut='rowOff(row_68)'>
+            <td class="closed" width=16% valign="top">3/31/2024 3:44:26 PM</td>
+            <td class="closed" width=10% valign="top">F240044162</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E28 E33 M28</td>
+            <td class="closed" width=36% valign="top">9369 57th Ave S</td>
+            <td class="closed" width=14% valign="top">Medic Response, 6 per Rule</td>
+        </tr>
+      
+        <tr id=row_69 onMouseOver='rowOn(row_69)' onMouseOut='rowOff(row_69)'>
+            <td class="closed" width=16% valign="top">3/31/2024 3:43:09 PM</td>
+            <td class="closed" width=10% valign="top">F240044161</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A2</td>
+            <td class="closed" width=36% valign="top">1st Ave N / Republican St</td>
+            <td class="closed" width=14% valign="top">Aid Response Yellow</td>
+        </tr>
+      
+        <tr id=row_70 onMouseOver='rowOn(row_70)' onMouseOut='rowOff(row_70)'>
+            <td class="closed" width=16% valign="top">3/31/2024 3:35:02 PM</td>
+            <td class="closed" width=10% valign="top">F240044160</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E37</td>
+            <td class="closed" width=36% valign="top">4533 Sw Henderson St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_71 onMouseOver='rowOn(row_71)' onMouseOut='rowOff(row_71)'>
+            <td class="closed" width=16% valign="top">3/31/2024 3:35:02 PM</td>
+            <td class="closed" width=10% valign="top">F240044160</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">L13</td>
+            <td class="closed" width=36% valign="top">4533 Sw Henderson St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_72 onMouseOver='rowOn(row_72)' onMouseOut='rowOff(row_72)'>
+            <td class="closed" width=16% valign="top">3/31/2024 3:34:26 PM</td>
+            <td class="closed" width=10% valign="top">F240044159</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E35</td>
+            <td class="closed" width=36% valign="top">8340 15th Ave Nw</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_73 onMouseOver='rowOn(row_73)' onMouseOut='rowOff(row_73)'>
+            <td class="closed" width=16% valign="top">3/31/2024 3:25:34 PM</td>
+            <td class="closed" width=10% valign="top">F240044158</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A14</td>
+            <td class="closed" width=36% valign="top">2461 4th Ave S</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_75 onMouseOver='rowOn(row_75)' onMouseOut='rowOff(row_75)'>
+            <td class="closed" width=16% valign="top">3/31/2024 3:24:40 PM</td>
+            <td class="closed" width=10% valign="top">F240044157</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E9 L6</td>
+            <td class="closed" width=36% valign="top">2701 3rd Ave W</td>
+            <td class="closed" width=14% valign="top">Auto Fire Alarm</td>
+        </tr>
+      
+        <tr id=row_76 onMouseOver='rowOn(row_76)' onMouseOut='rowOff(row_76)'>
+            <td class="closed" width=16% valign="top">3/31/2024 3:23:28 PM</td>
+            <td class="closed" width=10% valign="top">F240044156</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">L10</td>
+            <td class="closed" width=36% valign="top">423 11th Ave E</td>
+            <td class="closed" width=14% valign="top">Water Job Minor</td>
+        </tr>
+      
+        <tr id=row_77 onMouseOver='rowOn(row_77)' onMouseOut='rowOff(row_77)'>
+            <td class="closed" width=16% valign="top">3/31/2024 3:19:24 PM</td>
+            <td class="closed" width=10% valign="top">F240044155</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">L11</td>
+            <td class="closed" width=36% valign="top">5001 California Ave Sw</td>
+            <td class="closed" width=14% valign="top">Rescue Elevator</td>
+        </tr>
+      
+        <tr id=row_78 onMouseOver='rowOn(row_78)' onMouseOut='rowOff(row_78)'>
+            <td class="closed" width=16% valign="top">3/31/2024 3:12:52 PM</td>
+            <td class="closed" width=10% valign="top">F240044152</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E24</td>
+            <td class="closed" width=36% valign="top">12505 Greenwood Ave N</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_79 onMouseOver='rowOn(row_79)' onMouseOut='rowOff(row_79)'>
+            <td class="closed" width=16% valign="top">3/31/2024 3:05:16 PM</td>
+            <td class="closed" width=10% valign="top">F240044150</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E37</td>
+            <td class="closed" width=36% valign="top">3204 Sw Morgan St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_80 onMouseOver='rowOn(row_80)' onMouseOut='rowOff(row_80)'>
+            <td class="closed" width=16% valign="top">3/31/2024 3:06:35 PM</td>
+            <td class="closed" width=10% valign="top">F240044151</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A4</td>
+            <td class="closed" width=36% valign="top">6th Ave N / Denny Way</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_81 onMouseOver='rowOn(row_81)' onMouseOut='rowOff(row_81)'>
+            <td class="closed" width=16% valign="top">3/31/2024 3:00:58 PM</td>
+            <td class="closed" width=10% valign="top">F240044146</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A5</td>
+            <td class="closed" width=36% valign="top">1765 6th Ave S</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_82 onMouseOver='rowOn(row_82)' onMouseOut='rowOff(row_82)'>
+            <td class="closed" width=16% valign="top">3/31/2024 3:00:58 PM</td>
+            <td class="closed" width=10% valign="top">F240044146</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E10</td>
+            <td class="closed" width=36% valign="top">1765 6th Ave S</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_83 onMouseOver='rowOn(row_83)' onMouseOut='rowOff(row_83)'>
+            <td class="closed" width=16% valign="top">3/31/2024 2:57:11 PM</td>
+            <td class="closed" width=10% valign="top">F240044145</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E22</td>
+            <td class="closed" width=36% valign="top">4544 7th Ave Ne</td>
+            <td class="closed" width=14% valign="top">Investigate Out Of Service</td>
+        </tr>
+      
+        <tr id=row_84 onMouseOver='rowOn(row_84)' onMouseOut='rowOff(row_84)'>
+            <td class="closed" width=16% valign="top">3/31/2024 2:49:23 PM</td>
+            <td class="closed" width=10% valign="top">F240044140</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A31</td>
+            <td class="closed" width=36% valign="top">3rd Ave Nw / Nw 127th St</td>
+            <td class="closed" width=14% valign="top">Medic Response, 6 per Rule</td>
+        </tr>
+      
+        <tr id=row_85 onMouseOver='rowOn(row_85)' onMouseOut='rowOff(row_85)'>
+            <td class="closed" width=16% valign="top">3/31/2024 2:49:23 PM</td>
+            <td class="closed" width=10% valign="top">F240044140</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">M31</td>
+            <td class="closed" width=36% valign="top">3rd Ave Nw / Nw 127th St</td>
+            <td class="closed" width=14% valign="top">Medic Response, 6 per Rule</td>
+        </tr>
+      
+        <tr id=row_88 onMouseOver='rowOn(row_88)' onMouseOut='rowOff(row_88)'>
+            <td class="closed" width=16% valign="top">3/31/2024 2:49:23 PM</td>
+            <td class="closed" width=10% valign="top">F240044140</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E31 L5 M1</td>
+            <td class="closed" width=36% valign="top">3rd Ave Nw / Nw 127th St</td>
+            <td class="closed" width=14% valign="top">Medic Response, 6 per Rule</td>
+        </tr>
+      
+        <tr id=row_89 onMouseOver='rowOn(row_89)' onMouseOut='rowOff(row_89)'>
+            <td class="closed" width=16% valign="top">3/31/2024 2:47:46 PM</td>
+            <td class="closed" width=10% valign="top">F240044139</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">M17</td>
+            <td class="closed" width=36% valign="top">2144 N 62nd St</td>
+            <td class="closed" width=14% valign="top">Medic Response</td>
+        </tr>
+      
+        <tr id=row_90 onMouseOver='rowOn(row_90)' onMouseOut='rowOff(row_90)'>
+            <td class="closed" width=16% valign="top">3/31/2024 2:47:46 PM</td>
+            <td class="closed" width=10% valign="top">F240044139</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E17</td>
+            <td class="closed" width=36% valign="top">2144 N 62nd St</td>
+            <td class="closed" width=14% valign="top">Medic Response</td>
+        </tr>
+      
+        <tr id=row_91 onMouseOver='rowOn(row_91)' onMouseOut='rowOff(row_91)'>
+            <td class="closed" width=16% valign="top">3/31/2024 2:46:55 PM</td>
+            <td class="closed" width=10% valign="top">F240044138</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E35</td>
+            <td class="closed" width=36% valign="top">9023 Mary Ave Nw</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_92 onMouseOver='rowOn(row_92)' onMouseOut='rowOff(row_92)'>
+            <td class="closed" width=16% valign="top">3/31/2024 2:35:12 PM</td>
+            <td class="closed" width=10% valign="top">F240044137</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E24</td>
+            <td class="closed" width=36% valign="top">13754 AURORA AVE N</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_93 onMouseOver='rowOn(row_93)' onMouseOut='rowOff(row_93)'>
+            <td class="closed" width=16% valign="top">3/31/2024 2:34:29 PM</td>
+            <td class="closed" width=10% valign="top">F240044136</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E8</td>
+            <td class="closed" width=36% valign="top">10 Mercer St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_94 onMouseOver='rowOn(row_94)' onMouseOut='rowOff(row_94)'>
+            <td class="closed" width=16% valign="top">3/31/2024 2:29:19 PM</td>
+            <td class="closed" width=10% valign="top">F240044135</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">L12</td>
+            <td class="closed" width=36% valign="top">4200 S Othello St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_95 onMouseOver='rowOn(row_95)' onMouseOut='rowOff(row_95)'>
+            <td class="closed" width=16% valign="top">3/31/2024 2:24:53 PM</td>
+            <td class="closed" width=10% valign="top">F240044134</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E28</td>
+            <td class="closed" width=36% valign="top">7117 Holly Park Dr S</td>
+            <td class="closed" width=14% valign="top">Electrical Problem</td>
+        </tr>
+      
+        <tr id=row_98 onMouseOver='rowOn(row_98)' onMouseOut='rowOff(row_98)'>
+            <td class="closed" width=16% valign="top">3/31/2024 2:21:59 PM</td>
+            <td class="closed" width=10% valign="top">F240044133</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A5 M10 R1</td>
+            <td class="closed" width=36% valign="top">6th Ave S / S Massachusetts St</td>
+            <td class="closed" width=14% valign="top">Medic Response, Overdose</td>
+        </tr>
+      
+        <tr id=row_100 onMouseOver='rowOn(row_100)' onMouseOut='rowOff(row_100)'>
+            <td class="closed" width=16% valign="top">3/31/2024 2:19:48 PM</td>
+            <td class="closed" width=10% valign="top">F240044132</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A31 M31</td>
+            <td class="closed" width=36% valign="top">545 Ne 112th St</td>
+            <td class="closed" width=14% valign="top">Medic Response</td>
+        </tr>
+      
+        <tr id=row_101 onMouseOver='rowOn(row_101)' onMouseOut='rowOff(row_101)'>
+            <td class="closed" width=16% valign="top">3/31/2024 2:14:43 PM</td>
+            <td class="closed" width=10% valign="top">F240044131</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A4</td>
+            <td class="closed" width=36% valign="top">222 Pike St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_102 onMouseOver='rowOn(row_102)' onMouseOut='rowOff(row_102)'>
+            <td class="closed" width=16% valign="top">3/31/2024 2:14:19 PM</td>
+            <td class="closed" width=10% valign="top">F240044130</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E16</td>
+            <td class="closed" width=36% valign="top">1508 Ne 102nd St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_103 onMouseOver='rowOn(row_103)' onMouseOut='rowOff(row_103)'>
+            <td class="closed" width=16% valign="top">3/31/2024 2:07:35 PM</td>
+            <td class="closed" width=10% valign="top">F240044129</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">R1</td>
+            <td class="closed" width=36% valign="top">3rd Ave S / S Stacy St</td>
+            <td class="closed" width=14% valign="top">Illegal Burn</td>
+        </tr>
+      
+        <tr id=row_104 onMouseOver='rowOn(row_104)' onMouseOut='rowOff(row_104)'>
+            <td class="closed" width=16% valign="top">3/31/2024 2:01:42 PM</td>
+            <td class="closed" width=10% valign="top">F240044128</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E17</td>
+            <td class="closed" width=36% valign="top">5300 24th Ave Ne</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_105 onMouseOver='rowOn(row_105)' onMouseOut='rowOff(row_105)'>
+            <td class="closed" width=16% valign="top">3/31/2024 2:01:18 PM</td>
+            <td class="closed" width=10% valign="top">F240044127</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">M28</td>
+            <td class="closed" width=36% valign="top">11427 Crestwood Dr S</td>
+            <td class="closed" width=14% valign="top">Medic Response</td>
+        </tr>
+      
+        <tr id=row_106 onMouseOver='rowOn(row_106)' onMouseOut='rowOff(row_106)'>
+            <td class="closed" width=16% valign="top">3/31/2024 2:01:18 PM</td>
+            <td class="closed" width=10% valign="top">F240044127</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E33</td>
+            <td class="closed" width=36% valign="top">11427 Crestwood Dr S</td>
+            <td class="closed" width=14% valign="top">Medic Response</td>
+        </tr>
+      
+        <tr id=row_108 onMouseOver='rowOn(row_108)' onMouseOut='rowOff(row_108)'>
+            <td class="closed" width=16% valign="top">3/31/2024 1:58:38 PM</td>
+            <td class="closed" width=10% valign="top">F240044125</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E34 L10</td>
+            <td class="closed" width=36% valign="top">4130 E Madison St</td>
+            <td class="closed" width=14% valign="top">Alarm Bell</td>
+        </tr>
+      
+        <tr id=row_109 onMouseOver='rowOn(row_109)' onMouseOut='rowOff(row_109)'>
+            <td class="closed" width=16% valign="top">3/31/2024 1:56:39 PM</td>
+            <td class="closed" width=10% valign="top">F240044124</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A2</td>
+            <td class="closed" width=36% valign="top">1918 3RD AVE</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_110 onMouseOver='rowOn(row_110)' onMouseOut='rowOff(row_110)'>
+            <td class="closed" width=16% valign="top">3/31/2024 1:50:20 PM</td>
+            <td class="closed" width=10% valign="top">F240044122</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">L4</td>
+            <td class="closed" width=36% valign="top">2014 Fairview Ave</td>
+            <td class="closed" width=14% valign="top">Rescue Elevator</td>
+        </tr>
+      
+        <tr id=row_111 onMouseOver='rowOn(row_111)' onMouseOut='rowOff(row_111)'>
+            <td class="closed" width=16% valign="top">3/31/2024 1:50:37 PM</td>
+            <td class="closed" width=10% valign="top">F240044121</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E37</td>
+            <td class="closed" width=36% valign="top">3204 Sw Morgan St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_112 onMouseOver='rowOn(row_112)' onMouseOut='rowOff(row_112)'>
+            <td class="closed" width=16% valign="top">3/31/2024 1:38:18 PM</td>
+            <td class="closed" width=10% valign="top">F240044119</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E38</td>
+            <td class="closed" width=36% valign="top">33rd Ave Ne / Ne Blakeley St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_113 onMouseOver='rowOn(row_113)' onMouseOut='rowOff(row_113)'>
+            <td class="closed" width=16% valign="top">3/31/2024 1:37:11 PM</td>
+            <td class="closed" width=10% valign="top">F240044118</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A31</td>
+            <td class="closed" width=36% valign="top">13030 Linden Ave N</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_114 onMouseOver='rowOn(row_114)' onMouseOut='rowOff(row_114)'>
+            <td class="closed" width=16% valign="top">3/31/2024 1:36:03 PM</td>
+            <td class="closed" width=10% valign="top">F240044115</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A4</td>
+            <td class="closed" width=36% valign="top">1950 Alaskan Way</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_116 onMouseOver='rowOn(row_116)' onMouseOut='rowOff(row_116)'>
+            <td class="closed" width=16% valign="top">3/31/2024 1:37:09 PM</td>
+            <td class="closed" width=10% valign="top">F240044116</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E10 L1</td>
+            <td class="closed" width=36% valign="top">607 3rd Ave</td>
+            <td class="closed" width=14% valign="top">Auto Fire Alarm</td>
+        </tr>
+      
+        <tr id=row_117 onMouseOver='rowOn(row_117)' onMouseOut='rowOff(row_117)'>
+            <td class="closed" width=16% valign="top">3/31/2024 1:32:06 PM</td>
+            <td class="closed" width=10% valign="top">F240044114</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E13</td>
+            <td class="closed" width=36% valign="top">5940 24th Ave S</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_118 onMouseOver='rowOn(row_118)' onMouseOut='rowOff(row_118)'>
+            <td class="closed" width=16% valign="top">3/31/2024 1:31:06 PM</td>
+            <td class="closed" width=10% valign="top">F240044113</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">M10</td>
+            <td class="closed" width=36% valign="top">1142 10th Ave E</td>
+            <td class="closed" width=14% valign="top">Medic Response</td>
+        </tr>
+      
+        <tr id=row_119 onMouseOver='rowOn(row_119)' onMouseOut='rowOff(row_119)'>
+            <td class="closed" width=16% valign="top">3/31/2024 1:31:06 PM</td>
+            <td class="closed" width=10% valign="top">F240044113</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A26</td>
+            <td class="closed" width=36% valign="top">1142 10th Ave E</td>
+            <td class="closed" width=14% valign="top">Medic Response</td>
+        </tr>
+      
+        <tr id=row_120 onMouseOver='rowOn(row_120)' onMouseOut='rowOff(row_120)'>
+            <td class="closed" width=16% valign="top">3/31/2024 1:23:03 PM</td>
+            <td class="closed" width=10% valign="top">F240044112</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E34</td>
+            <td class="closed" width=36% valign="top">2250 39th Ave E</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_121 onMouseOver='rowOn(row_121)' onMouseOut='rowOff(row_121)'>
+            <td class="closed" width=16% valign="top">3/31/2024 1:23:04 PM</td>
+            <td class="closed" width=10% valign="top">F240044111</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A25</td>
+            <td class="closed" width=36% valign="top">818 19th Ave</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_123 onMouseOver='rowOn(row_123)' onMouseOut='rowOff(row_123)'>
+            <td class="closed" width=16% valign="top">3/31/2024 1:18:02 PM</td>
+            <td class="closed" width=10% valign="top">F240044109</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E31 M31</td>
+            <td class="closed" width=36% valign="top">450 Ne 100th St</td>
+            <td class="closed" width=14% valign="top">Medic Response</td>
+        </tr>
+      
+        <tr id=row_125 onMouseOver='rowOn(row_125)' onMouseOut='rowOff(row_125)'>
+            <td class="closed" width=16% valign="top">3/31/2024 1:17:34 PM</td>
+            <td class="closed" width=10% valign="top">F240044108</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E20 L6</td>
+            <td class="closed" width=36% valign="top">2208 15th Ave W</td>
+            <td class="closed" width=14% valign="top">Auto Fire Alarm</td>
+        </tr>
+      
+        <tr id=row_126 onMouseOver='rowOn(row_126)' onMouseOut='rowOff(row_126)'>
+            <td class="closed" width=16% valign="top">3/31/2024 1:16:28 PM</td>
+            <td class="closed" width=10% valign="top">F240044107</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A31</td>
+            <td class="closed" width=36% valign="top">11560 Stone Ave N</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_127 onMouseOver='rowOn(row_127)' onMouseOut='rowOff(row_127)'>
+            <td class="closed" width=16% valign="top">3/31/2024 1:14:28 PM</td>
+            <td class="closed" width=10% valign="top">F240044106</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">L8</td>
+            <td class="closed" width=36% valign="top">6801 Greenwood Ave N</td>
+            <td class="closed" width=14% valign="top">Rescue Elevator</td>
+        </tr>
+      
+        <tr id=row_128 onMouseOver='rowOn(row_128)' onMouseOut='rowOff(row_128)'>
+            <td class="closed" width=16% valign="top">3/31/2024 1:14:41 PM</td>
+            <td class="closed" width=10% valign="top">F240044105</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E37</td>
+            <td class="closed" width=36% valign="top">6507 41st Ave Sw</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_129 onMouseOver='rowOn(row_129)' onMouseOut='rowOff(row_129)'>
+            <td class="closed" width=16% valign="top">3/31/2024 1:04:15 PM</td>
+            <td class="closed" width=10% valign="top">F240044104</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A10</td>
+            <td class="closed" width=36% valign="top">316 1st Ave S</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_130 onMouseOver='rowOn(row_130)' onMouseOut='rowOff(row_130)'>
+            <td class="closed" width=16% valign="top">3/31/2024 12:52:38 PM</td>
+            <td class="closed" width=10% valign="top">F240044100</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">L10</td>
+            <td class="closed" width=36% valign="top">1108 Broadway Ct</td>
+            <td class="closed" width=14% valign="top">Rescue Lock In/Out</td>
+        </tr>
+      
+        <tr id=row_131 onMouseOver='rowOn(row_131)' onMouseOut='rowOff(row_131)'>
+            <td class="closed" width=16% valign="top">3/31/2024 12:42:36 PM</td>
+            <td class="closed" width=10% valign="top">F240044098</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A31</td>
+            <td class="closed" width=36% valign="top">10507 Aurora Ave N</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_132 onMouseOver='rowOn(row_132)' onMouseOut='rowOff(row_132)'>
+            <td class="closed" width=16% valign="top">3/31/2024 12:41:21 PM</td>
+            <td class="closed" width=10% valign="top">F240044097</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E38</td>
+            <td class="closed" width=36% valign="top">5300 24th Ave Ne</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_133 onMouseOver='rowOn(row_133)' onMouseOut='rowOff(row_133)'>
+            <td class="closed" width=16% valign="top">3/31/2024 12:42:36 PM</td>
+            <td class="closed" width=10% valign="top">F240044098</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E31</td>
+            <td class="closed" width=36% valign="top">10507 Aurora Ave N</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_134 onMouseOver='rowOn(row_134)' onMouseOut='rowOff(row_134)'>
+            <td class="closed" width=16% valign="top">3/31/2024 12:32:04 PM</td>
+            <td class="closed" width=10% valign="top">F240044094</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A14</td>
+            <td class="closed" width=36% valign="top">Utah Ave S / S Stacy St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_135 onMouseOver='rowOn(row_135)' onMouseOut='rowOff(row_135)'>
+            <td class="closed" width=16% valign="top">3/31/2024 12:40:44 PM</td>
+            <td class="closed" width=10% valign="top">F240044095</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A4</td>
+            <td class="closed" width=36% valign="top">201 Westlake Ave N</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_136 onMouseOver='rowOn(row_136)' onMouseOut='rowOff(row_136)'>
+            <td class="closed" width=16% valign="top">3/31/2024 12:32:19 PM</td>
+            <td class="closed" width=10% valign="top">F240044092</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A26</td>
+            <td class="closed" width=36% valign="top">10th Ave E / E Highland Dr</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_137 onMouseOver='rowOn(row_137)' onMouseOut='rowOff(row_137)'>
+            <td class="closed" width=16% valign="top">3/31/2024 12:30:42 PM</td>
+            <td class="closed" width=10% valign="top">F240044091</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A5</td>
+            <td class="closed" width=36% valign="top">Edgar Martinez Dr S / Occidental Ave S</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_138 onMouseOver='rowOn(row_138)' onMouseOut='rowOff(row_138)'>
+            <td class="closed" width=16% valign="top">3/31/2024 12:27:46 PM</td>
+            <td class="closed" width=10% valign="top">F240044088</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E35</td>
+            <td class="closed" width=36% valign="top">14th Ave Nw / Nw 85th St</td>
+            <td class="closed" width=14% valign="top">MVI - Motor Vehicle Incident</td>
+        </tr>
+      
+        <tr id=row_139 onMouseOver='rowOn(row_139)' onMouseOut='rowOff(row_139)'>
+            <td class="closed" width=16% valign="top">3/31/2024 12:26:48 PM</td>
+            <td class="closed" width=10% valign="top">F240044087</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E41</td>
+            <td class="closed" width=36% valign="top">2642 29th Ave W</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_140 onMouseOver='rowOn(row_140)' onMouseOut='rowOff(row_140)'>
+            <td class="closed" width=16% valign="top">3/31/2024 12:24:52 PM</td>
+            <td class="closed" width=10% valign="top">F240044086</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">M1</td>
+            <td class="closed" width=36% valign="top">1630 43rd Ave E</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_141 onMouseOver='rowOn(row_141)' onMouseOut='rowOff(row_141)'>
+            <td class="closed" width=16% valign="top">3/31/2024 12:24:52 PM</td>
+            <td class="closed" width=10% valign="top">F240044086</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E34</td>
+            <td class="closed" width=36% valign="top">1630 43rd Ave E</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_142 onMouseOver='rowOn(row_142)' onMouseOut='rowOff(row_142)'>
+            <td class="closed" width=16% valign="top">3/31/2024 11:52:46 AM</td>
+            <td class="closed" width=10% valign="top">F240044074</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">M31</td>
+            <td class="closed" width=36% valign="top">1333 N 125th St</td>
+            <td class="closed" width=14% valign="top">Medic Response</td>
+        </tr>
+      
+        <tr id=row_143 onMouseOver='rowOn(row_143)' onMouseOut='rowOff(row_143)'>
+            <td class="closed" width=16% valign="top">3/31/2024 12:11:20 PM</td>
+            <td class="closed" width=10% valign="top">F240044082</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A4</td>
+            <td class="closed" width=36% valign="top">1st Ave N / Roy St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_146 onMouseOver='rowOn(row_146)' onMouseOut='rowOff(row_146)'>
+            <td class="closed" width=16% valign="top">3/31/2024 12:01:02 PM</td>
+            <td class="closed" width=10% valign="top">F240044078</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A14 E26 E27</td>
+            <td class="closed" width=36% valign="top">Nb Sr99 Fr Cloverdale</td>
+            <td class="closed" width=14% valign="top">MVI Freeway</td>
+        </tr>
+      
+        <tr id=row_147 onMouseOver='rowOn(row_147)' onMouseOut='rowOff(row_147)'>
+            <td class="closed" width=16% valign="top">3/31/2024 12:02:09 PM</td>
+            <td class="closed" width=10% valign="top">F240044077</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E39</td>
+            <td class="closed" width=36% valign="top">13716 Lake City Way Ne</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_148 onMouseOver='rowOn(row_148)' onMouseOut='rowOff(row_148)'>
+            <td class="closed" width=16% valign="top">3/31/2024 12:01:33 PM</td>
+            <td class="closed" width=10% valign="top">F240044076</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A10</td>
+            <td class="closed" width=36% valign="top">3rd Ave / Cherry St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_151 onMouseOver='rowOn(row_151)' onMouseOut='rowOff(row_151)'>
+            <td class="closed" width=16% valign="top">3/31/2024 11:56:12 AM</td>
+            <td class="closed" width=10% valign="top">F240044075</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E13 E30 M28</td>
+            <td class="closed" width=36% valign="top">4000 Martin Luther King Jr Way S</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_152 onMouseOver='rowOn(row_152)' onMouseOut='rowOff(row_152)'>
+            <td class="closed" width=16% valign="top">3/31/2024 11:52:46 AM</td>
+            <td class="closed" width=10% valign="top">F240044074</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E24</td>
+            <td class="closed" width=36% valign="top">1333 N 125th St</td>
+            <td class="closed" width=14% valign="top">Medic Response</td>
+        </tr>
+      
+        <tr id=row_153 onMouseOver='rowOn(row_153)' onMouseOut='rowOff(row_153)'>
+            <td class="closed" width=16% valign="top">3/31/2024 11:47:39 AM</td>
+            <td class="closed" width=10% valign="top">F240044071</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E28</td>
+            <td class="closed" width=36% valign="top">6925 Military Rd S</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_154 onMouseOver='rowOn(row_154)' onMouseOut='rowOff(row_154)'>
+            <td class="closed" width=16% valign="top">3/31/2024 11:18:37 AM</td>
+            <td class="closed" width=10% valign="top">F240044066</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">L3</td>
+            <td class="closed" width=36% valign="top">1131 31ST AVE</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_155 onMouseOver='rowOn(row_155)' onMouseOut='rowOff(row_155)'>
+            <td class="closed" width=16% valign="top">3/31/2024 11:21:22 AM</td>
+            <td class="closed" width=10% valign="top">F240044067</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E17</td>
+            <td class="closed" width=36% valign="top">20th Ave Ne / Ne 58th St</td>
+            <td class="closed" width=14% valign="top">Illegal Burn</td>
+        </tr>
+      
+        <tr id=row_156 onMouseOver='rowOn(row_156)' onMouseOut='rowOff(row_156)'>
+            <td class="closed" width=16% valign="top">3/31/2024 11:18:37 AM</td>
+            <td class="closed" width=10% valign="top">F240044066</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E6</td>
+            <td class="closed" width=36% valign="top">1131 31ST AVE</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_157 onMouseOver='rowOn(row_157)' onMouseOut='rowOff(row_157)'>
+            <td class="closed" width=16% valign="top">3/31/2024 11:04:07 AM</td>
+            <td class="closed" width=10% valign="top">F240044063</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E8</td>
+            <td class="closed" width=36% valign="top">100 Crockett St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_158 onMouseOver='rowOn(row_158)' onMouseOut='rowOff(row_158)'>
+            <td class="closed" width=16% valign="top">3/31/2024 10:55:29 AM</td>
+            <td class="closed" width=10% valign="top">F240044060</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E24</td>
+            <td class="closed" width=36% valign="top">924 N 143rd St</td>
+            <td class="closed" width=14% valign="top">Low Acuity Response</td>
+        </tr>
+      
+        <tr id=row_159 onMouseOver='rowOn(row_159)' onMouseOut='rowOff(row_159)'>
+            <td class="closed" width=16% valign="top">3/31/2024 10:51:31 AM</td>
+            <td class="closed" width=10% valign="top">F240044059</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E11</td>
+            <td class="closed" width=36% valign="top">8th Ave Sw / Sw Barton St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_160 onMouseOver='rowOn(row_160)' onMouseOut='rowOff(row_160)'>
+            <td class="closed" width=16% valign="top">3/31/2024 10:50:47 AM</td>
+            <td class="closed" width=10% valign="top">F240044058</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">M10</td>
+            <td class="closed" width=36% valign="top">2538 Beacon Ave S</td>
+            <td class="closed" width=14% valign="top">Medic Response</td>
+        </tr>
+      
+        <tr id=row_161 onMouseOver='rowOn(row_161)' onMouseOut='rowOff(row_161)'>
+            <td class="closed" width=16% valign="top">3/31/2024 10:50:47 AM</td>
+            <td class="closed" width=10% valign="top">F240044058</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E13</td>
+            <td class="closed" width=36% valign="top">2538 Beacon Ave S</td>
+            <td class="closed" width=14% valign="top">Medic Response</td>
+        </tr>
+      
+        <tr id=row_162 onMouseOver='rowOn(row_162)' onMouseOut='rowOff(row_162)'>
+            <td class="closed" width=16% valign="top">3/31/2024 10:43:17 AM</td>
+            <td class="closed" width=10% valign="top">F240044056</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E37</td>
+            <td class="closed" width=36% valign="top">6539 42nd Ave Sw</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_163 onMouseOver='rowOn(row_163)' onMouseOut='rowOff(row_163)'>
+            <td class="closed" width=16% valign="top">3/31/2024 10:19:03 AM</td>
+            <td class="closed" width=10% valign="top">F240044050</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">L9</td>
+            <td class="closed" width=36% valign="top">1013 NE 45TH ST</td>
+            <td class="closed" width=14% valign="top">Medic Response, Overdose</td>
+        </tr>
+      
+        <tr id=row_166 onMouseOver='rowOn(row_166)' onMouseOut='rowOff(row_166)'>
+            <td class="closed" width=16% valign="top">3/31/2024 10:19:03 AM</td>
+            <td class="closed" width=10% valign="top">F240044050</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E17 E22 M17</td>
+            <td class="closed" width=36% valign="top">1013 NE 45TH ST</td>
+            <td class="closed" width=14% valign="top">Medic Response, Overdose</td>
+        </tr>
+      
+        <tr id=row_167 onMouseOver='rowOn(row_167)' onMouseOut='rowOff(row_167)'>
+            <td class="closed" width=16% valign="top">3/31/2024 10:11:38 AM</td>
+            <td class="closed" width=10% valign="top">F240044049</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E30</td>
+            <td class="closed" width=36% valign="top">2022 34th Ave S</td>
+            <td class="closed" width=14% valign="top">Automatic Fire Alarm Resd</td>
+        </tr>
+      
+        <tr id=row_169 onMouseOver='rowOn(row_169)' onMouseOut='rowOff(row_169)'>
+            <td class="closed" width=16% valign="top">3/31/2024 10:03:52 AM</td>
+            <td class="closed" width=10% valign="top">F240044047</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E16 L9</td>
+            <td class="closed" width=36% valign="top">6600 Roosevelt Way Ne</td>
+            <td class="closed" width=14% valign="top">Auto Fire Alarm</td>
+        </tr>
+      
+        <tr id=row_170 onMouseOver='rowOn(row_170)' onMouseOut='rowOff(row_170)'>
+            <td class="closed" width=16% valign="top">3/31/2024 9:59:03 AM</td>
+            <td class="closed" width=10% valign="top">F240044046</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E29</td>
+            <td class="closed" width=36% valign="top">44th Ave Sw / Sw Alaska St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_171 onMouseOver='rowOn(row_171)' onMouseOut='rowOff(row_171)'>
+            <td class="closed" width=16% valign="top">3/31/2024 9:50:59 AM</td>
+            <td class="closed" width=10% valign="top">F240044044</td>
+            <td class="closed" width=7% valign="top"></td>
+            <td class="closed" width=17% valign="top">A2</td>
+            <td class="closed" width=36% valign="top">1600 2nd Ave</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_172 onMouseOver='rowOn(row_172)' onMouseOut='rowOff(row_172)'>
+            <td class="closed" width=16% valign="top">3/31/2024 9:47:21 AM</td>
+            <td class="closed" width=10% valign="top">F240044042</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A4</td>
+            <td class="closed" width=36% valign="top">2001 4th Ave</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_173 onMouseOver='rowOn(row_173)' onMouseOut='rowOff(row_173)'>
+            <td class="closed" width=16% valign="top">3/31/2024 9:47:18 AM</td>
+            <td class="closed" width=10% valign="top">F240044041</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A2</td>
+            <td class="closed" width=36% valign="top">Union St / 6th Ave</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_174 onMouseOver='rowOn(row_174)' onMouseOut='rowOff(row_174)'>
+            <td class="closed" width=16% valign="top">3/31/2024 9:44:03 AM</td>
+            <td class="closed" width=10% valign="top">F240044039</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E28</td>
+            <td class="closed" width=36% valign="top">5858 Seward Park Ave S</td>
+            <td class="closed" width=14% valign="top">Automatic Medical Alarm</td>
+        </tr>
+      
+        <tr id=row_176 onMouseOver='rowOn(row_176)' onMouseOut='rowOff(row_176)'>
+            <td class="closed" width=16% valign="top">3/31/2024 9:44:19 AM</td>
+            <td class="closed" width=10% valign="top">F240044038</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E32 M32</td>
+            <td class="closed" width=36% valign="top">4831 35th Ave Sw</td>
+            <td class="closed" width=14% valign="top">Medic Response</td>
+        </tr>
+      
+        <tr id=row_184 onMouseOver='rowOn(row_184)' onMouseOut='rowOff(row_184)'>
+            <td class="closed" width=16% valign="top">3/31/2024 9:33:03 AM</td>
+            <td class="closed" width=10% valign="top">F240044035</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">B2 B5 E10 E13 L1 M10 M44 SAFT2</td>
+            <td class="closed" width=36% valign="top">2445 3rd Ave S</td>
+            <td class="closed" width=14% valign="top">Rescue Extrication</td>
+        </tr>
+      
+        <tr id=row_185 onMouseOver='rowOn(row_185)' onMouseOut='rowOff(row_185)'>
+            <td class="closed" width=16% valign="top">3/31/2024 9:33:03 AM</td>
+            <td class="closed" width=10% valign="top">F240044035</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">R1</td>
+            <td class="closed" width=36% valign="top">2445 3rd Ave S</td>
+            <td class="closed" width=14% valign="top">Rescue Extrication</td>
+        </tr>
+      
+        <tr id=row_186 onMouseOver='rowOn(row_186)' onMouseOut='rowOff(row_186)'>
+            <td class="closed" width=16% valign="top">3/31/2024 9:33:00 AM</td>
+            <td class="closed" width=10% valign="top">F240044036</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E34</td>
+            <td class="closed" width=36% valign="top">616 25th Ave E</td>
+            <td class="closed" width=14% valign="top">Automatic Fire Alarm False</td>
+        </tr>
+      
+        <tr id=row_187 onMouseOver='rowOn(row_187)' onMouseOut='rowOff(row_187)'>
+            <td class="closed" width=16% valign="top">3/31/2024 9:33:03 AM</td>
+            <td class="closed" width=10% valign="top">F240044035</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A14</td>
+            <td class="closed" width=36% valign="top">2445 3rd Ave S</td>
+            <td class="closed" width=14% valign="top">Rescue Extrication</td>
+        </tr>
+      
+        <tr id=row_188 onMouseOver='rowOn(row_188)' onMouseOut='rowOff(row_188)'>
+            <td class="closed" width=16% valign="top">3/31/2024 9:30:39 AM</td>
+            <td class="closed" width=10% valign="top">F240044034</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E24</td>
+            <td class="closed" width=36% valign="top">401 N 130th St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_189 onMouseOver='rowOn(row_189)' onMouseOut='rowOff(row_189)'>
+            <td class="closed" width=16% valign="top">3/31/2024 9:27:27 AM</td>
+            <td class="closed" width=10% valign="top">F240044031</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">M1</td>
+            <td class="closed" width=36% valign="top">308 4th Ave S</td>
+            <td class="closed" width=14% valign="top">Medic Response</td>
+        </tr>
+      
+        <tr id=row_191 onMouseOver='rowOn(row_191)' onMouseOut='rowOff(row_191)'>
+            <td class="closed" width=16% valign="top">3/31/2024 9:27:51 AM</td>
+            <td class="closed" width=10% valign="top">F240044032</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E8 L4</td>
+            <td class="closed" width=36% valign="top">700 5th Ave N</td>
+            <td class="closed" width=14% valign="top">Auto Fire Alarm</td>
+        </tr>
+      
+        <tr id=row_192 onMouseOver='rowOn(row_192)' onMouseOut='rowOff(row_192)'>
+            <td class="closed" width=16% valign="top">3/31/2024 9:27:27 AM</td>
+            <td class="closed" width=10% valign="top">F240044031</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A5</td>
+            <td class="closed" width=36% valign="top">308 4th Ave S</td>
+            <td class="closed" width=14% valign="top">Medic Response</td>
+        </tr>
+      
+        <tr id=row_193 onMouseOver='rowOn(row_193)' onMouseOut='rowOff(row_193)'>
+            <td class="closed" width=16% valign="top">3/31/2024 9:25:19 AM</td>
+            <td class="closed" width=10% valign="top">F240044030</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E35</td>
+            <td class="closed" width=36% valign="top">8340 15th Ave Nw</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_194 onMouseOver='rowOn(row_194)' onMouseOut='rowOff(row_194)'>
+            <td class="closed" width=16% valign="top">3/31/2024 9:20:33 AM</td>
+            <td class="closed" width=10% valign="top">F240044028</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">M31</td>
+            <td class="closed" width=36% valign="top">106 N 79th St</td>
+            <td class="closed" width=14% valign="top">Medic Response</td>
+        </tr>
+      
+        <tr id=row_195 onMouseOver='rowOn(row_195)' onMouseOut='rowOff(row_195)'>
+            <td class="closed" width=16% valign="top">3/31/2024 9:20:33 AM</td>
+            <td class="closed" width=10% valign="top">F240044028</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E21</td>
+            <td class="closed" width=36% valign="top">106 N 79th St</td>
+            <td class="closed" width=14% valign="top">Medic Response</td>
+        </tr>
+      
+        <tr id=row_196 onMouseOver='rowOn(row_196)' onMouseOut='rowOff(row_196)'>
+            <td class="closed" width=16% valign="top">3/31/2024 9:19:44 AM</td>
+            <td class="closed" width=10% valign="top">F240044027</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E18</td>
+            <td class="closed" width=36% valign="top">2836 Nw 62nd St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_197 onMouseOver='rowOn(row_197)' onMouseOut='rowOff(row_197)'>
+            <td class="closed" width=16% valign="top">3/31/2024 9:00:38 AM</td>
+            <td class="closed" width=10% valign="top">F240044023</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E25</td>
+            <td class="closed" width=36% valign="top">Broadway E / E Harrison St</td>
+            <td class="closed" width=14% valign="top">Dumpster Fire</td>
+        </tr>
+      
+        <tr id=row_198 onMouseOver='rowOn(row_198)' onMouseOut='rowOff(row_198)'>
+            <td class="closed" width=16% valign="top">3/31/2024 9:00:23 AM</td>
+            <td class="closed" width=10% valign="top">F240044022</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">L4</td>
+            <td class="closed" width=36% valign="top">1902 2nd Ave</td>
+            <td class="closed" width=14% valign="top">Auto Fire Alarm</td>
+        </tr>
+      
+        <tr id=row_200 onMouseOver='rowOn(row_200)' onMouseOut='rowOff(row_200)'>
+            <td class="closed" width=16% valign="top">3/31/2024 9:00:23 AM</td>
+            <td class="closed" width=10% valign="top">F240044022</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E2 L1</td>
+            <td class="closed" width=36% valign="top">1902 2nd Ave</td>
+            <td class="closed" width=14% valign="top">Auto Fire Alarm</td>
+        </tr>
+      
+        <tr id=row_201 onMouseOver='rowOn(row_201)' onMouseOut='rowOff(row_201)'>
+            <td class="closed" width=16% valign="top">3/31/2024 8:54:48 AM</td>
+            <td class="closed" width=10% valign="top">F240044021</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E27</td>
+            <td class="closed" width=36% valign="top">6188 4th Ave S</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_202 onMouseOver='rowOn(row_202)' onMouseOut='rowOff(row_202)'>
+            <td class="closed" width=16% valign="top">3/31/2024 8:51:35 AM</td>
+            <td class="closed" width=10% valign="top">F240044020</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E25</td>
+            <td class="closed" width=36% valign="top">1002 E DENNY WAY</td>
+            <td class="closed" width=14% valign="top">Rubbish Fire</td>
+        </tr>
+      
+        <tr id=row_205 onMouseOver='rowOn(row_205)' onMouseOut='rowOff(row_205)'>
+            <td class="closed" width=16% valign="top">3/31/2024 8:40:05 AM</td>
+            <td class="closed" width=10% valign="top">F240044019</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E17 E22 M17</td>
+            <td class="closed" width=36% valign="top">Eastlake Ave E / E Allison St</td>
+            <td class="closed" width=14% valign="top">Medic Response, 7 per Rule</td>
+        </tr>
+      
+        <tr id=row_206 onMouseOver='rowOn(row_206)' onMouseOut='rowOff(row_206)'>
+            <td class="closed" width=16% valign="top">3/31/2024 8:36:16 AM</td>
+            <td class="closed" width=10% valign="top">F240044017</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E10</td>
+            <td class="closed" width=36% valign="top">OCCIDENTAL AVE S / S MAIN ST</td>
+            <td class="closed" width=14% valign="top">Fuel Spill</td>
+        </tr>
+      
+        <tr id=row_207 onMouseOver='rowOn(row_207)' onMouseOut='rowOff(row_207)'>
+            <td class="closed" width=16% valign="top">3/31/2024 8:21:37 AM</td>
+            <td class="closed" width=10% valign="top">F240044012</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A25</td>
+            <td class="closed" width=36% valign="top">600 E Howell St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_208 onMouseOver='rowOn(row_208)' onMouseOut='rowOff(row_208)'>
+            <td class="closed" width=16% valign="top">3/31/2024 8:21:58 AM</td>
+            <td class="closed" width=10% valign="top">F240044013</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A2</td>
+            <td class="closed" width=36% valign="top">2701 Alaskan Way</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_210 onMouseOver='rowOn(row_210)' onMouseOut='rowOff(row_210)'>
+            <td class="closed" width=16% valign="top">3/31/2024 8:14:23 AM</td>
+            <td class="closed" width=10% valign="top">F240044011</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E11 L13</td>
+            <td class="closed" width=36% valign="top">9050 16th Ave Sw</td>
+            <td class="closed" width=14% valign="top">Auto Fire Alarm</td>
+        </tr>
+      
+        <tr id=row_211 onMouseOver='rowOn(row_211)' onMouseOut='rowOff(row_211)'>
+            <td class="closed" width=16% valign="top">3/31/2024 7:56:20 AM</td>
+            <td class="closed" width=10% valign="top">F240044010</td>
+            <td class="closed" width=7% valign="top"></td>
+            <td class="closed" width=17% valign="top">FAC</td>
+            <td class="closed" width=36% valign="top">105 5th Ave S</td>
+            <td class="closed" width=14% valign="top">1RED 1 Unit</td>
+        </tr>
+      
+        <tr id=row_212 onMouseOver='rowOn(row_212)' onMouseOut='rowOff(row_212)'>
+            <td class="closed" width=16% valign="top">3/31/2024 7:56:20 AM</td>
+            <td class="closed" width=10% valign="top">F240044010</td>
+            <td class="closed" width=7% valign="top"></td>
+            <td class="closed" width=17% valign="top">FAC</td>
+            <td class="closed" width=36% valign="top">105 5th Ave S</td>
+            <td class="closed" width=14% valign="top">1RED 1 Unit</td>
+        </tr>
+      
+        <tr id=row_213 onMouseOver='rowOn(row_213)' onMouseOut='rowOff(row_213)'>
+            <td class="closed" width=16% valign="top">3/31/2024 7:50:27 AM</td>
+            <td class="closed" width=10% valign="top">F240044008</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E41</td>
+            <td class="closed" width=36% valign="top">3406 W Government Way</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_214 onMouseOver='rowOn(row_214)' onMouseOut='rowOff(row_214)'>
+            <td class="closed" width=16% valign="top">3/31/2024 7:50:54 AM</td>
+            <td class="closed" width=10% valign="top">F240044009</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A10</td>
+            <td class="closed" width=36% valign="top">308 4th Ave S</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_215 onMouseOver='rowOn(row_215)' onMouseOut='rowOff(row_215)'>
+            <td class="closed" width=16% valign="top">3/31/2024 7:48:42 AM</td>
+            <td class="closed" width=10% valign="top">F240044006</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A5</td>
+            <td class="closed" width=36% valign="top">501 Rainier Ave S</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_216 onMouseOver='rowOn(row_216)' onMouseOut='rowOff(row_216)'>
+            <td class="closed" width=16% valign="top">3/31/2024 7:49:31 AM</td>
+            <td class="closed" width=10% valign="top">F240044007</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E13</td>
+            <td class="closed" width=36% valign="top">1410 S Plum St</td>
+            <td class="closed" width=14% valign="top">1RED 1 Unit</td>
+        </tr>
+      
+        <tr id=row_217 onMouseOver='rowOn(row_217)' onMouseOut='rowOff(row_217)'>
+            <td class="closed" width=16% valign="top">3/31/2024 7:40:01 AM</td>
+            <td class="closed" width=10% valign="top">F240044004</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E26</td>
+            <td class="closed" width=36% valign="top">9240 2nd Ave Sw</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_218 onMouseOver='rowOn(row_218)' onMouseOut='rowOff(row_218)'>
+            <td class="closed" width=16% valign="top">3/31/2024 7:40:12 AM</td>
+            <td class="closed" width=10% valign="top">F240044005</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E9</td>
+            <td class="closed" width=36% valign="top">4251 Aurora Ave N</td>
+            <td class="closed" width=14% valign="top">Automatic Medical Alarm</td>
+        </tr>
+      
+        <tr id=row_219 onMouseOver='rowOn(row_219)' onMouseOut='rowOff(row_219)'>
+            <td class="closed" width=16% valign="top">3/31/2024 7:37:34 AM</td>
+            <td class="closed" width=10% valign="top">F240044001</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E40</td>
+            <td class="closed" width=36% valign="top">8601 26th Ave Ne</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_220 onMouseOver='rowOn(row_220)' onMouseOut='rowOff(row_220)'>
+            <td class="closed" width=16% valign="top">3/31/2024 7:29:10 AM</td>
+            <td class="closed" width=10% valign="top">F240043999</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E10</td>
+            <td class="closed" width=36% valign="top">10TH AVE S / S DEARBORN ST</td>
+            <td class="closed" width=14% valign="top">Encampment Fire</td>
+        </tr>
+      
+        <tr id=row_221 onMouseOver='rowOn(row_221)' onMouseOut='rowOff(row_221)'>
+            <td class="closed" width=16% valign="top">3/31/2024 7:15:21 AM</td>
+            <td class="closed" width=10% valign="top">F240043990</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">M10</td>
+            <td class="closed" width=36% valign="top">1135 31st Ave S</td>
+            <td class="closed" width=14% valign="top">Medic Response, 6 per Rule</td>
+        </tr>
+      
+        <tr id=row_222 onMouseOver='rowOn(row_222)' onMouseOut='rowOff(row_222)'>
+            <td class="closed" width=16% valign="top">3/31/2024 7:25:42 AM</td>
+            <td class="closed" width=10% valign="top">F240043994</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E20</td>
+            <td class="closed" width=36% valign="top">15th Ave Nw / Nw Market St</td>
+            <td class="closed" width=14% valign="top">Car Fire</td>
+        </tr>
+      
+        <tr id=row_223 onMouseOver='rowOn(row_223)' onMouseOut='rowOff(row_223)'>
+            <td class="closed" width=16% valign="top">3/31/2024 7:25:42 AM</td>
+            <td class="closed" width=10% valign="top">F240043994</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E18</td>
+            <td class="closed" width=36% valign="top">15th Ave Nw / Nw Market St</td>
+            <td class="closed" width=14% valign="top">Car Fire</td>
+        </tr>
+      
+        <tr id=row_224 onMouseOver='rowOn(row_224)' onMouseOut='rowOff(row_224)'>
+            <td class="closed" width=16% valign="top">3/31/2024 7:15:21 AM</td>
+            <td class="closed" width=10% valign="top">F240043990</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">L3</td>
+            <td class="closed" width=36% valign="top">1135 31st Ave S</td>
+            <td class="closed" width=14% valign="top">Medic Response, 6 per Rule</td>
+        </tr>
+      
+        <tr id=row_225 onMouseOver='rowOn(row_225)' onMouseOut='rowOff(row_225)'>
+            <td class="closed" width=16% valign="top">3/31/2024 7:21:17 AM</td>
+            <td class="closed" width=10% valign="top">F240043993</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A2</td>
+            <td class="closed" width=36% valign="top">2030 3rd Ave</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_226 onMouseOver='rowOn(row_226)' onMouseOut='rowOff(row_226)'>
+            <td class="closed" width=16% valign="top">3/31/2024 7:18:08 AM</td>
+            <td class="closed" width=10% valign="top">F240043992</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A25</td>
+            <td class="closed" width=36% valign="top">1519 12th Ave</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_227 onMouseOver='rowOn(row_227)' onMouseOut='rowOff(row_227)'>
+            <td class="closed" width=16% valign="top">3/31/2024 7:15:21 AM</td>
+            <td class="closed" width=10% valign="top">F240043990</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E6</td>
+            <td class="closed" width=36% valign="top">1135 31st Ave S</td>
+            <td class="closed" width=14% valign="top">Medic Response, 6 per Rule</td>
+        </tr>
+      
+        <tr id=row_229 onMouseOver='rowOn(row_229)' onMouseOut='rowOff(row_229)'>
+            <td class="closed" width=16% valign="top">3/31/2024 7:16:06 AM</td>
+            <td class="closed" width=10% valign="top">F240043991</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E31 M31</td>
+            <td class="closed" width=36% valign="top">11514 Phinney Ave N</td>
+            <td class="closed" width=14% valign="top">Medic Response, 7 per Rule</td>
+        </tr>
+      
+        <tr id=row_230 onMouseOver='rowOn(row_230)' onMouseOut='rowOff(row_230)'>
+            <td class="closed" width=16% valign="top">3/31/2024 7:16:06 AM</td>
+            <td class="closed" width=10% valign="top">F240043991</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E24</td>
+            <td class="closed" width=36% valign="top">11514 Phinney Ave N</td>
+            <td class="closed" width=14% valign="top">Medic Response, 7 per Rule</td>
+        </tr>
+      
+        <tr id=row_231 onMouseOver='rowOn(row_231)' onMouseOut='rowOff(row_231)'>
+            <td class="closed" width=16% valign="top">3/31/2024 7:10:44 AM</td>
+            <td class="closed" width=10% valign="top">F240043989</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A10</td>
+            <td class="closed" width=36% valign="top">308 4th Ave S</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_232 onMouseOver='rowOn(row_232)' onMouseOut='rowOff(row_232)'>
+            <td class="closed" width=16% valign="top">3/31/2024 7:10:44 AM</td>
+            <td class="closed" width=10% valign="top">F240043989</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E10</td>
+            <td class="closed" width=36% valign="top">308 4th Ave S</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_233 onMouseOver='rowOn(row_233)' onMouseOut='rowOff(row_233)'>
+            <td class="closed" width=16% valign="top">3/31/2024 7:05:17 AM</td>
+            <td class="closed" width=10% valign="top">F240043987</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E30</td>
+            <td class="closed" width=36% valign="top">2807 S MCCLELLAN ST</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_234 onMouseOver='rowOn(row_234)' onMouseOut='rowOff(row_234)'>
+            <td class="closed" width=16% valign="top">3/31/2024 6:43:30 AM</td>
+            <td class="closed" width=10% valign="top">F240043977</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">CHAP7</td>
+            <td class="closed" width=36% valign="top">9031 9th Ave Sw</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_235 onMouseOver='rowOn(row_235)' onMouseOut='rowOff(row_235)'>
+            <td class="closed" width=16% valign="top">3/31/2024 6:43:30 AM</td>
+            <td class="closed" width=10% valign="top">F240043977</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">FAC</td>
+            <td class="closed" width=36% valign="top">9031 9th Ave Sw</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_236 onMouseOver='rowOn(row_236)' onMouseOut='rowOff(row_236)'>
+            <td class="closed" width=16% valign="top">3/31/2024 6:43:30 AM</td>
+            <td class="closed" width=10% valign="top">F240043977</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">CHAP7</td>
+            <td class="closed" width=36% valign="top">9031 9th Ave Sw</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_238 onMouseOver='rowOn(row_238)' onMouseOut='rowOff(row_238)'>
+            <td class="closed" width=16% valign="top">3/31/2024 6:57:57 AM</td>
+            <td class="closed" width=10% valign="top">F240043983</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E5 M1</td>
+            <td class="closed" width=36% valign="top">60 Yesler Way</td>
+            <td class="closed" width=14% valign="top">Medic Response</td>
+        </tr>
+      
+        <tr id=row_239 onMouseOver='rowOn(row_239)' onMouseOut='rowOff(row_239)'>
+            <td class="closed" width=16% valign="top">3/31/2024 6:43:30 AM</td>
+            <td class="closed" width=10% valign="top">F240043977</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">CHAP5</td>
+            <td class="closed" width=36% valign="top">9031 9th Ave Sw</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_240 onMouseOver='rowOn(row_240)' onMouseOut='rowOff(row_240)'>
+            <td class="closed" width=16% valign="top">3/31/2024 6:55:59 AM</td>
+            <td class="closed" width=10% valign="top">F240043982</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">L4</td>
+            <td class="closed" width=36% valign="top">2030 3rd Ave</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_241 onMouseOver='rowOn(row_241)' onMouseOut='rowOff(row_241)'>
+            <td class="closed" width=16% valign="top">3/31/2024 6:49:32 AM</td>
+            <td class="closed" width=10% valign="top">F240043980</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A10</td>
+            <td class="closed" width=36% valign="top">5th Ave / Marion St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_242 onMouseOver='rowOn(row_242)' onMouseOut='rowOff(row_242)'>
+            <td class="closed" width=16% valign="top">3/31/2024 6:49:32 AM</td>
+            <td class="closed" width=10% valign="top">F240043980</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E5</td>
+            <td class="closed" width=36% valign="top">5th Ave / Marion St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_243 onMouseOver='rowOn(row_243)' onMouseOut='rowOff(row_243)'>
+            <td class="closed" width=16% valign="top">3/31/2024 6:48:28 AM</td>
+            <td class="closed" width=10% valign="top">F240043979</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A5</td>
+            <td class="closed" width=36% valign="top">800 Jefferson St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_244 onMouseOver='rowOn(row_244)' onMouseOut='rowOff(row_244)'>
+            <td class="closed" width=16% valign="top">3/31/2024 6:46:18 AM</td>
+            <td class="closed" width=10% valign="top">F240043978</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E2</td>
+            <td class="closed" width=36% valign="top">3rd Ave / Bell St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_245 onMouseOver='rowOn(row_245)' onMouseOut='rowOff(row_245)'>
+            <td class="closed" width=16% valign="top">3/31/2024 6:43:30 AM</td>
+            <td class="closed" width=10% valign="top">F240043977</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E11</td>
+            <td class="closed" width=36% valign="top">9031 9th Ave Sw</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_246 onMouseOver='rowOn(row_246)' onMouseOut='rowOff(row_246)'>
+            <td class="closed" width=16% valign="top">3/31/2024 6:35:18 AM</td>
+            <td class="closed" width=10% valign="top">F240043976</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A10</td>
+            <td class="closed" width=36% valign="top">Occidental Ave S / S Charles St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_247 onMouseOver='rowOn(row_247)' onMouseOut='rowOff(row_247)'>
+            <td class="closed" width=16% valign="top">3/31/2024 6:34:01 AM</td>
+            <td class="closed" width=10% valign="top">F240043975</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A2</td>
+            <td class="closed" width=36% valign="top">3rd Ave / Bell St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_248 onMouseOver='rowOn(row_248)' onMouseOut='rowOff(row_248)'>
+            <td class="closed" width=16% valign="top">3/31/2024 6:23:42 AM</td>
+            <td class="closed" width=10% valign="top">F240043974</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E30</td>
+            <td class="closed" width=36% valign="top">2821 S Walden St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_249 onMouseOver='rowOn(row_249)' onMouseOut='rowOff(row_249)'>
+            <td class="closed" width=16% valign="top">3/31/2024 6:19:56 AM</td>
+            <td class="closed" width=10% valign="top">F240043973</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E28</td>
+            <td class="closed" width=36% valign="top">5968 Rainier Ave S</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_250 onMouseOver='rowOn(row_250)' onMouseOut='rowOff(row_250)'>
+            <td class="closed" width=16% valign="top">3/31/2024 5:53:19 AM</td>
+            <td class="closed" width=10% valign="top">F240043969</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A5</td>
+            <td class="closed" width=36% valign="top">12th Ave S / S Jackson St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_251 onMouseOver='rowOn(row_251)' onMouseOut='rowOff(row_251)'>
+            <td class="closed" width=16% valign="top">3/31/2024 5:49:23 AM</td>
+            <td class="closed" width=10% valign="top">F240043968</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E10</td>
+            <td class="closed" width=36% valign="top">223 Yesler Way</td>
+            <td class="closed" width=14% valign="top">1RED 1 Unit</td>
+        </tr>
+      
+        <tr id=row_252 onMouseOver='rowOn(row_252)' onMouseOut='rowOff(row_252)'>
+            <td class="closed" width=16% valign="top">3/31/2024 5:41:02 AM</td>
+            <td class="closed" width=10% valign="top">F240043967</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E6</td>
+            <td class="closed" width=36% valign="top">Rainier Ave S / S Dearborn St</td>
+            <td class="closed" width=14% valign="top">Illegal Burn</td>
+        </tr>
+      
+        <tr id=row_253 onMouseOver='rowOn(row_253)' onMouseOut='rowOff(row_253)'>
+            <td class="closed" width=16% valign="top">3/31/2024 5:33:07 AM</td>
+            <td class="closed" width=10% valign="top">F240043966</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">L9</td>
+            <td class="closed" width=36% valign="top">5505 5th Ave Ne</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_254 onMouseOver='rowOn(row_254)' onMouseOut='rowOff(row_254)'>
+            <td class="closed" width=16% valign="top">3/31/2024 5:30:35 AM</td>
+            <td class="closed" width=10% valign="top">F240043965</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A2</td>
+            <td class="closed" width=36% valign="top">1011 Olive Way</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_255 onMouseOver='rowOn(row_255)' onMouseOut='rowOff(row_255)'>
+            <td class="closed" width=16% valign="top">3/31/2024 5:15:46 AM</td>
+            <td class="closed" width=10% valign="top">F240043964</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E17</td>
+            <td class="closed" width=36% valign="top">4732 Brooklyn Ave Ne</td>
+            <td class="closed" width=14% valign="top">Dumpster Fire</td>
+        </tr>
+      
+        <tr id=row_256 onMouseOver='rowOn(row_256)' onMouseOut='rowOff(row_256)'>
+            <td class="closed" width=16% valign="top">3/31/2024 5:15:46 AM</td>
+            <td class="closed" width=10% valign="top">F240043964</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E16</td>
+            <td class="closed" width=36% valign="top">4732 Brooklyn Ave Ne</td>
+            <td class="closed" width=14% valign="top">Dumpster Fire</td>
+        </tr>
+      
+        <tr id=row_258 onMouseOver='rowOn(row_258)' onMouseOut='rowOff(row_258)'>
+            <td class="closed" width=16% valign="top">3/31/2024 5:02:48 AM</td>
+            <td class="closed" width=10% valign="top">F240043961</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A10 M10</td>
+            <td class="closed" width=36% valign="top">204 3rd Ave S</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_259 onMouseOver='rowOn(row_259)' onMouseOut='rowOff(row_259)'>
+            <td class="closed" width=16% valign="top">3/31/2024 4:48:30 AM</td>
+            <td class="closed" width=10% valign="top">F240043960</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A5</td>
+            <td class="closed" width=36% valign="top">4th Ave / Pike St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_261 onMouseOver='rowOn(row_261)' onMouseOut='rowOff(row_261)'>
+            <td class="closed" width=16% valign="top">3/31/2024 4:48:27 AM</td>
+            <td class="closed" width=10% valign="top">F240043959</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E25 L10</td>
+            <td class="closed" width=36% valign="top">415 10th Ave</td>
+            <td class="closed" width=14% valign="top">Auto Fire Alarm</td>
+        </tr>
+      
+        <tr id=row_262 onMouseOver='rowOn(row_262)' onMouseOut='rowOff(row_262)'>
+            <td class="closed" width=16% valign="top">3/31/2024 4:43:22 AM</td>
+            <td class="closed" width=10% valign="top">F240043958</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A25</td>
+            <td class="closed" width=36% valign="top">724 Pine St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_263 onMouseOver='rowOn(row_263)' onMouseOut='rowOff(row_263)'>
+            <td class="closed" width=16% valign="top">3/31/2024 4:40:11 AM</td>
+            <td class="closed" width=10% valign="top">F240043957</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E17</td>
+            <td class="closed" width=36% valign="top">4750 15TH AVE NE</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_264 onMouseOver='rowOn(row_264)' onMouseOut='rowOff(row_264)'>
+            <td class="closed" width=16% valign="top">3/31/2024 4:38:47 AM</td>
+            <td class="closed" width=10% valign="top">F240043956</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A14</td>
+            <td class="closed" width=36% valign="top">2425 4th Ave S</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_267 onMouseOver='rowOn(row_267)' onMouseOut='rowOff(row_267)'>
+            <td class="closed" width=16% valign="top">3/31/2024 4:33:49 AM</td>
+            <td class="closed" width=10% valign="top">F240043955</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A2 E5 M1</td>
+            <td class="closed" width=36% valign="top">3rd Ave / Pike St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_268 onMouseOver='rowOn(row_268)' onMouseOut='rowOff(row_268)'>
+            <td class="closed" width=16% valign="top">3/31/2024 4:14:44 AM</td>
+            <td class="closed" width=10% valign="top">F240043954</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A2</td>
+            <td class="closed" width=36% valign="top">4th Ave / Union St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_269 onMouseOver='rowOn(row_269)' onMouseOut='rowOff(row_269)'>
+            <td class="closed" width=16% valign="top">3/31/2024 4:12:33 AM</td>
+            <td class="closed" width=10% valign="top">F240043953</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">L9</td>
+            <td class="closed" width=36% valign="top">5033 Brooklyn Ave Ne</td>
+            <td class="closed" width=14% valign="top">Ladder Code Yellow</td>
+        </tr>
+      
+        <tr id=row_270 onMouseOver='rowOn(row_270)' onMouseOut='rowOff(row_270)'>
+            <td class="closed" width=16% valign="top">3/31/2024 3:57:29 AM</td>
+            <td class="closed" width=10% valign="top">F240043952</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">M1</td>
+            <td class="closed" width=36% valign="top">800 Seneca St</td>
+            <td class="closed" width=14% valign="top">Medic Response</td>
+        </tr>
+      
+        <tr id=row_271 onMouseOver='rowOn(row_271)' onMouseOut='rowOff(row_271)'>
+            <td class="closed" width=16% valign="top">3/31/2024 3:57:29 AM</td>
+            <td class="closed" width=10% valign="top">F240043952</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">M17</td>
+            <td class="closed" width=36% valign="top">800 Seneca St</td>
+            <td class="closed" width=14% valign="top">Medic Response</td>
+        </tr>
+      
+        <tr id=row_272 onMouseOver='rowOn(row_272)' onMouseOut='rowOff(row_272)'>
+            <td class="closed" width=16% valign="top">3/31/2024 3:57:29 AM</td>
+            <td class="closed" width=10% valign="top">F240043952</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A25</td>
+            <td class="closed" width=36% valign="top">800 Seneca St</td>
+            <td class="closed" width=14% valign="top">Medic Response</td>
+        </tr>
+      
+        <tr id=row_273 onMouseOver='rowOn(row_273)' onMouseOut='rowOff(row_273)'>
+            <td class="closed" width=16% valign="top">3/31/2024 3:53:46 AM</td>
+            <td class="closed" width=10% valign="top">F240043951</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E33</td>
+            <td class="closed" width=36% valign="top">10411 60th Ave S</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_274 onMouseOver='rowOn(row_274)' onMouseOut='rowOff(row_274)'>
+            <td class="closed" width=16% valign="top">3/31/2024 3:19:09 AM</td>
+            <td class="closed" width=10% valign="top">F240043947</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">CHAP5</td>
+            <td class="closed" width=36% valign="top">501 Rainier Ave S</td>
+            <td class="closed" width=14% valign="top">Medic Response, 7 per Rule</td>
+        </tr>
+      
+        <tr id=row_275 onMouseOver='rowOn(row_275)' onMouseOut='rowOff(row_275)'>
+            <td class="closed" width=16% valign="top">3/31/2024 3:50:30 AM</td>
+            <td class="closed" width=10% valign="top">F240043950</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E5</td>
+            <td class="closed" width=36% valign="top">3rd Ave / Pike St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_276 onMouseOver='rowOn(row_276)' onMouseOut='rowOff(row_276)'>
+            <td class="closed" width=16% valign="top">3/31/2024 3:19:09 AM</td>
+            <td class="closed" width=10% valign="top">F240043947</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E6</td>
+            <td class="closed" width=36% valign="top">501 Rainier Ave S</td>
+            <td class="closed" width=14% valign="top">Medic Response, 7 per Rule</td>
+        </tr>
+      
+        <tr id=row_277 onMouseOver='rowOn(row_277)' onMouseOut='rowOff(row_277)'>
+            <td class="closed" width=16% valign="top">3/31/2024 3:35:43 AM</td>
+            <td class="closed" width=10% valign="top">F240043949</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A2</td>
+            <td class="closed" width=36% valign="top">1610 2nd Ave</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_279 onMouseOver='rowOn(row_279)' onMouseOut='rowOff(row_279)'>
+            <td class="closed" width=16% valign="top">3/31/2024 3:29:08 AM</td>
+            <td class="closed" width=10% valign="top">F240043948</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A5 M1</td>
+            <td class="closed" width=36% valign="top">1800 S Jackson St</td>
+            <td class="closed" width=14% valign="top">Medic Response</td>
+        </tr>
+      
+        <tr id=row_281 onMouseOver='rowOn(row_281)' onMouseOut='rowOff(row_281)'>
+            <td class="closed" width=16% valign="top">3/31/2024 3:19:09 AM</td>
+            <td class="closed" width=10% valign="top">F240043947</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">L3 M10</td>
+            <td class="closed" width=36% valign="top">501 Rainier Ave S</td>
+            <td class="closed" width=14% valign="top">Medic Response, 7 per Rule</td>
+        </tr>
+      
+        <tr id=row_282 onMouseOver='rowOn(row_282)' onMouseOut='rowOff(row_282)'>
+            <td class="closed" width=16% valign="top">3/31/2024 3:19:09 AM</td>
+            <td class="closed" width=10% valign="top">F240043947</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A10</td>
+            <td class="closed" width=36% valign="top">501 Rainier Ave S</td>
+            <td class="closed" width=14% valign="top">Medic Response, 7 per Rule</td>
+        </tr>
+      
+        <tr id=row_283 onMouseOver='rowOn(row_283)' onMouseOut='rowOff(row_283)'>
+            <td class="closed" width=16% valign="top">3/31/2024 3:17:50 AM</td>
+            <td class="closed" width=10% valign="top">F240043946</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E20</td>
+            <td class="closed" width=36% valign="top">3231 6th Ave W</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_284 onMouseOver='rowOn(row_284)' onMouseOut='rowOff(row_284)'>
+            <td class="closed" width=16% valign="top">3/31/2024 3:12:18 AM</td>
+            <td class="closed" width=10% valign="top">F240043943</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E6</td>
+            <td class="closed" width=36% valign="top">1722 26th Ave S</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_286 onMouseOver='rowOn(row_286)' onMouseOut='rowOff(row_286)'>
+            <td class="closed" width=16% valign="top">3/31/2024 2:54:09 AM</td>
+            <td class="closed" width=10% valign="top">F240043940</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E5 L1</td>
+            <td class="closed" width=36% valign="top">1413 3rd Ave</td>
+            <td class="closed" width=14% valign="top">Auto Fire Alarm</td>
+        </tr>
+      
+        <tr id=row_287 onMouseOver='rowOn(row_287)' onMouseOut='rowOff(row_287)'>
+            <td class="closed" width=16% valign="top">3/31/2024 2:29:06 AM</td>
+            <td class="closed" width=10% valign="top">F240043936</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A2</td>
+            <td class="closed" width=36% valign="top">Sb I5 At Yesler</td>
+            <td class="closed" width=14% valign="top">MVI - Motor Vehicle Incident</td>
+        </tr>
+      
+        <tr id=row_288 onMouseOver='rowOn(row_288)' onMouseOut='rowOff(row_288)'>
+            <td class="closed" width=16% valign="top">3/31/2024 2:32:02 AM</td>
+            <td class="closed" width=10% valign="top">F240043937</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A5</td>
+            <td class="closed" width=36% valign="top">3rd Ave / Pike St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_291 onMouseOver='rowOn(row_291)' onMouseOut='rowOff(row_291)'>
+            <td class="closed" width=16% valign="top">3/31/2024 2:29:06 AM</td>
+            <td class="closed" width=10% valign="top">F240043936</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A2 E10 E5</td>
+            <td class="closed" width=36% valign="top">Sb I5 At Yesler</td>
+            <td class="closed" width=14% valign="top">MVI - Motor Vehicle Incident</td>
+        </tr>
+      
+        <tr id=row_293 onMouseOver='rowOn(row_293)' onMouseOut='rowOff(row_293)'>
+            <td class="closed" width=16% valign="top">3/31/2024 2:25:29 AM</td>
+            <td class="closed" width=10% valign="top">F240043935</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E25 L10</td>
+            <td class="closed" width=36% valign="top">1717 Belmont Ave</td>
+            <td class="closed" width=14% valign="top">Auto Fire Alarm</td>
+        </tr>
+      
+        <tr id=row_294 onMouseOver='rowOn(row_294)' onMouseOut='rowOff(row_294)'>
+            <td class="closed" width=16% valign="top">3/31/2024 2:18:28 AM</td>
+            <td class="closed" width=10% valign="top">F240043934</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E28</td>
+            <td class="closed" width=36% valign="top">7514 40th Ave S</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_295 onMouseOver='rowOn(row_295)' onMouseOut='rowOff(row_295)'>
+            <td class="closed" width=16% valign="top">3/31/2024 2:17:01 AM</td>
+            <td class="closed" width=10% valign="top">F240043933</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">L4</td>
+            <td class="closed" width=36% valign="top">420 Vine St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_296 onMouseOver='rowOn(row_296)' onMouseOut='rowOff(row_296)'>
+            <td class="closed" width=16% valign="top">3/31/2024 2:16:43 AM</td>
+            <td class="closed" width=10% valign="top">F240043932</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E2</td>
+            <td class="closed" width=36% valign="top">1260 Republican St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_297 onMouseOver='rowOn(row_297)' onMouseOut='rowOff(row_297)'>
+            <td class="closed" width=16% valign="top">3/31/2024 2:12:29 AM</td>
+            <td class="closed" width=10% valign="top">F240043929</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A25</td>
+            <td class="closed" width=36% valign="top">16th Ave / E Union St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_298 onMouseOver='rowOn(row_298)' onMouseOut='rowOff(row_298)'>
+            <td class="closed" width=16% valign="top">3/31/2024 2:12:29 AM</td>
+            <td class="closed" width=10% valign="top">F240043929</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E25</td>
+            <td class="closed" width=36% valign="top">16th Ave / E Union St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_299 onMouseOver='rowOn(row_299)' onMouseOut='rowOff(row_299)'>
+            <td class="closed" width=16% valign="top">3/31/2024 2:12:29 AM</td>
+            <td class="closed" width=10% valign="top">F240043929</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">L10</td>
+            <td class="closed" width=36% valign="top">16th Ave / E Union St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_300 onMouseOver='rowOn(row_300)' onMouseOut='rowOff(row_300)'>
+            <td class="closed" width=16% valign="top">3/31/2024 2:03:42 AM</td>
+            <td class="closed" width=10% valign="top">F240043927</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E39</td>
+            <td class="closed" width=36% valign="top">11702 15th Ave Ne</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_301 onMouseOver='rowOn(row_301)' onMouseOut='rowOff(row_301)'>
+            <td class="closed" width=16% valign="top">3/31/2024 1:59:02 AM</td>
+            <td class="closed" width=10% valign="top">F240043925</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A2</td>
+            <td class="closed" width=36% valign="top">111 Cedar St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_306 onMouseOver='rowOn(row_306)' onMouseOut='rowOff(row_306)'>
+            <td class="closed" width=16% valign="top">3/31/2024 1:54:09 AM</td>
+            <td class="closed" width=10% valign="top">F240043924</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A25 B2 E25 M1 M44</td>
+            <td class="closed" width=36% valign="top">1521 10th Ave</td>
+            <td class="closed" width=14% valign="top">Scenes Of Violence 7</td>
+        </tr>
+      
+        <tr id=row_308 onMouseOver='rowOn(row_308)' onMouseOut='rowOff(row_308)'>
+            <td class="closed" width=16% valign="top">3/31/2024 1:49:38 AM</td>
+            <td class="closed" width=10% valign="top">F240043922</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E24 L5</td>
+            <td class="closed" width=36% valign="top">10507 Aurora Ave N</td>
+            <td class="closed" width=14% valign="top">Auto Fire Alarm</td>
+        </tr>
+      
+        <tr id=row_309 onMouseOver='rowOn(row_309)' onMouseOut='rowOff(row_309)'>
+            <td class="closed" width=16% valign="top">3/31/2024 1:47:26 AM</td>
+            <td class="closed" width=10% valign="top">F240043921</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E31</td>
+            <td class="closed" width=36% valign="top">Ashworth Ave N / N 97th St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_310 onMouseOver='rowOn(row_310)' onMouseOut='rowOff(row_310)'>
+            <td class="closed" width=16% valign="top">3/31/2024 1:41:54 AM</td>
+            <td class="closed" width=10% valign="top">F240043919</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A10</td>
+            <td class="closed" width=36% valign="top">109 YESLER WAY</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_311 onMouseOver='rowOn(row_311)' onMouseOut='rowOff(row_311)'>
+            <td class="closed" width=16% valign="top">3/31/2024 1:39:55 AM</td>
+            <td class="closed" width=10% valign="top">F240043917</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">M32</td>
+            <td class="closed" width=36% valign="top">9435 45th Ave Sw</td>
+            <td class="closed" width=14% valign="top">Medic Response</td>
+        </tr>
+      
+        <tr id=row_312 onMouseOver='rowOn(row_312)' onMouseOut='rowOff(row_312)'>
+            <td class="closed" width=16% valign="top">3/31/2024 1:39:55 AM</td>
+            <td class="closed" width=10% valign="top">F240043917</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E37</td>
+            <td class="closed" width=36% valign="top">9435 45th Ave Sw</td>
+            <td class="closed" width=14% valign="top">Medic Response</td>
+        </tr>
+      
+        <tr id=row_313 onMouseOver='rowOn(row_313)' onMouseOut='rowOff(row_313)'>
+            <td class="closed" width=16% valign="top">3/31/2024 1:35:18 AM</td>
+            <td class="closed" width=10% valign="top">F240043914</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E6</td>
+            <td class="closed" width=36% valign="top">221 18th Ave S</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_315 onMouseOver='rowOn(row_315)' onMouseOut='rowOff(row_315)'>
+            <td class="closed" width=16% valign="top">3/31/2024 1:09:33 AM</td>
+            <td class="closed" width=10% valign="top">F240043907</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E32 L11</td>
+            <td class="closed" width=36% valign="top">36th Ave Sw / Sw Snoqualmie St</td>
+            <td class="closed" width=14% valign="top">Alarm Bell</td>
+        </tr>
+      
+        <tr id=row_316 onMouseOver='rowOn(row_316)' onMouseOut='rowOff(row_316)'>
+            <td class="closed" width=16% valign="top">3/31/2024 1:12:31 AM</td>
+            <td class="closed" width=10% valign="top">F240043906</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A2</td>
+            <td class="closed" width=36% valign="top">1330 5th Ave</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_317 onMouseOver='rowOn(row_317)' onMouseOut='rowOff(row_317)'>
+            <td class="closed" width=16% valign="top">3/31/2024 1:05:03 AM</td>
+            <td class="closed" width=10% valign="top">F240043904</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E31</td>
+            <td class="closed" width=36% valign="top">11550 Stone Ave N</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_318 onMouseOver='rowOn(row_318)' onMouseOut='rowOff(row_318)'>
+            <td class="closed" width=16% valign="top">3/31/2024 12:57:04 AM</td>
+            <td class="closed" width=10% valign="top">F240043903</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E25</td>
+            <td class="closed" width=36% valign="top">925 E Pike St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_319 onMouseOver='rowOn(row_319)' onMouseOut='rowOff(row_319)'>
+            <td class="closed" width=16% valign="top">3/31/2024 12:48:02 AM</td>
+            <td class="closed" width=10% valign="top">F240043899</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E17</td>
+            <td class="closed" width=36% valign="top">1135 Ne Campus Pkwy</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_320 onMouseOver='rowOn(row_320)' onMouseOut='rowOff(row_320)'>
+            <td class="closed" width=16% valign="top">3/31/2024 12:49:11 AM</td>
+            <td class="closed" width=10% valign="top">F240043900</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A25</td>
+            <td class="closed" width=36% valign="top">1425 Broadway</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_321 onMouseOver='rowOn(row_321)' onMouseOut='rowOff(row_321)'>
+            <td class="closed" width=16% valign="top">3/31/2024 12:48:02 AM</td>
+            <td class="closed" width=10% valign="top">F240043899</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">L9</td>
+            <td class="closed" width=36% valign="top">1135 Ne Campus Pkwy</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_322 onMouseOver='rowOn(row_322)' onMouseOut='rowOff(row_322)'>
+            <td class="closed" width=16% valign="top">3/31/2024 12:44:19 AM</td>
+            <td class="closed" width=10% valign="top">F240043898</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E24</td>
+            <td class="closed" width=36% valign="top">14100 Linden Ave N</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_323 onMouseOver='rowOn(row_323)' onMouseOut='rowOff(row_323)'>
+            <td class="closed" width=16% valign="top">3/31/2024 12:40:40 AM</td>
+            <td class="closed" width=10% valign="top">F240043897</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A5</td>
+            <td class="closed" width=36% valign="top">721 S Lane St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_324 onMouseOver='rowOn(row_324)' onMouseOut='rowOff(row_324)'>
+            <td class="closed" width=16% valign="top">3/31/2024 12:36:30 AM</td>
+            <td class="closed" width=10% valign="top">F240043896</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E9</td>
+            <td class="closed" width=36% valign="top">1101 N Northlake Way</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_325 onMouseOver='rowOn(row_325)' onMouseOut='rowOff(row_325)'>
+            <td class="closed" width=16% valign="top">3/31/2024 12:31:03 AM</td>
+            <td class="closed" width=10% valign="top">F240043894</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E31</td>
+            <td class="closed" width=36% valign="top">10520 Stone Ave N</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_326 onMouseOver='rowOn(row_326)' onMouseOut='rowOff(row_326)'>
+            <td class="closed" width=16% valign="top">3/31/2024 12:29:27 AM</td>
+            <td class="closed" width=10% valign="top">F240043893</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E30</td>
+            <td class="closed" width=36% valign="top">1911 22nd Ave S</td>
+            <td class="closed" width=14% valign="top">Hang-Up, Aid</td>
+        </tr>
+      
+        <tr id=row_327 onMouseOver='rowOn(row_327)' onMouseOut='rowOff(row_327)'>
+            <td class="closed" width=16% valign="top">3/31/2024 12:27:15 AM</td>
+            <td class="closed" width=10% valign="top">F240043892</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A10</td>
+            <td class="closed" width=36% valign="top">326 9TH AVE</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_328 onMouseOver='rowOn(row_328)' onMouseOut='rowOff(row_328)'>
+            <td class="closed" width=16% valign="top">3/31/2024 12:24:09 AM</td>
+            <td class="closed" width=10% valign="top">F240043891</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E34</td>
+            <td class="closed" width=36% valign="top">2720 E Madison St</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_329 onMouseOver='rowOn(row_329)' onMouseOut='rowOff(row_329)'>
+            <td class="closed" width=16% valign="top">3/31/2024 12:13:14 AM</td>
+            <td class="closed" width=10% valign="top">F240043889</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E17</td>
+            <td class="closed" width=36% valign="top">3801 Brooklyn Ave Ne</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_330 onMouseOver='rowOn(row_330)' onMouseOut='rowOff(row_330)'>
+            <td class="closed" width=16% valign="top">3/31/2024 12:11:38 AM</td>
+            <td class="closed" width=10% valign="top">F240043887</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E6</td>
+            <td class="closed" width=36% valign="top">1831 E Yesler Way</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_331 onMouseOver='rowOn(row_331)' onMouseOut='rowOff(row_331)'>
+            <td class="closed" width=16% valign="top">3/31/2024 12:07:56 AM</td>
+            <td class="closed" width=10% valign="top">F240043885</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">A10</td>
+            <td class="closed" width=36% valign="top">509 3rd Ave</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+        <tr id=row_332 onMouseOver='rowOn(row_332)' onMouseOut='rowOff(row_332)'>
+            <td class="closed" width=16% valign="top">3/31/2024 12:07:56 AM</td>
+            <td class="closed" width=10% valign="top">F240043885</td>
+            <td class="closed" width=7% valign="top">1</td>
+            <td class="closed" width=17% valign="top">E10</td>
+            <td class="closed" width=36% valign="top">509 3rd Ave</td>
+            <td class="closed" width=14% valign="top">Aid Response</td>
+        </tr>
+      
+  
+  
+  </table>
+  </table>
+  </td>
+  </tr>
+  </table>
+  <font face='Arial,Helvetica,Sans-Serif' Size='2'>&nbsp;Retrieved 267 dispatch messages for 3/31/2024&nbsp;&nbsp;&nbsp;<i>(screen automatically refreshes every 60 seconds)</i><br></font>
+
+  </body>
+  </html>
