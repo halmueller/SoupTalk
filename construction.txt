@@ -1,0 +1,25 @@
+Setup:
+install Python3 and virtual environment
+in venv, install BS4 and Requests
+run the check_install script
+
+curl -o sfdMarch31.html -v 'https://web.seattle.gov/sfd/realtime911/getRecsForDatePub.asp?action=Today&incDate=&rad1=des'
+https://web.seattle.gov/sfd/realtime911/
+https://web.seattle.gov/sfd/realtime911/getRecsForDatePub.asp?incDate=03%2F29%2F2024&rad1=des
+https://data.seattle.gov/Public-Safety/Seattle-Real-Time-Fire-911-Calls/kzjm-xkqj/data
+
+Lobster Quadrille
+https://www.cs.cmu.edu/~rgs/alice-X.html
+
+Environment:
+See https://stackoverflow.com/questions/75608323/how-do-i-solve-error-externally-managed-environment-every-time-i-use-pip-3 
+and https://realpython.com/python-virtual-environments-a-primer/
+python3 -m venv venv
+source venv/bin/activate
+pip3 install BeautifulSoup4
+pip3 install requests
+python3 scripts/check_install.py
+
+BS scraper:
+https://realpython.com/beautiful-soup-web-scraper-python/
+

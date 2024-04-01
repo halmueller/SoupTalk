@@ -1,0 +1,25 @@
+Problem statement
+Samples: official SFD page, NRHP updates, sfdlive.com
+Scraping vs API: Seattle official page, seattle.data.gov, sfdlive.com
+
+Alice in Wonderland
+
+Just enough Python
+environment
+
+Web page/HTML structure
+
+Walk through the SFD page
+
+
+
+
+Setup:
+install Python3 and virtual environment
+in venv, install BS4 and Requests
+run the check_install script
+
+Web pages:
+static page. What we'll use.
+Aside: dynamic page. Use requests-html or Selenium for these.
+
