@@ -13,7 +13,36 @@ https://www.nps.gov/subjects/nationalregister/weekly-list-2024-03-29.htm
 Lobster Quadrille
 https://www.cs.cmu.edu/~rgs/alice-X.html
 
+BeautifulSoup itself:
+https://www.crummy.com/software/BeautifulSoup/
 https://beautiful-soup-4.readthedocs.io/en/latest/#
+https://stackoverflow.com/questions/tagged/beautifulsoup
+From crummy.com:
+"I used to ask for donations from people who used Beautiful Soup.
+But I didn't write Beautiful Soup to make money. I wrote it to make the world a better place.
+I wrote it to be a tool for good.
+If you've used Beautiful Soup over the past 10+ years and want to say thank you, the best way is to be thoughtful about how you use it.
+You have power. Use it to make things better."
+
+Scraping MLB with BeautifulSoup:
+pandas - Scraping MLB daily lineups from rotowire using python - Stack Overflow — https://stackoverflow.com/questions/78244496/scraping-mlb-daily-lineups-from-rotowire-using-python
+python - Scraping Web data using BeautifulSoup - Stack Overflow —
+https://stackoverflow.com/questions/67814115/scraping-web-data-using-beautifulsoup
+
+SwiftSoup:
+https://github.com/scinfu/SwiftSoup
+
+Java Soup:
+https://jsoup.org
+
+Tag Soup:
+https://en.wikipedia.org/wiki/Tag_soup
+
+Mock Turtle
+https://en.wikipedia.org/wiki/Mock_Turtle
+
+Steely Dan: The Mock Turtle Song
+https://www.youtube.com/watch?v=TI1AxjCsy1g
 
 Environment:
 See https://stackoverflow.com/questions/75608323/how-do-i-solve-error-externally-managed-environment-every-time-i-use-pip-3 
