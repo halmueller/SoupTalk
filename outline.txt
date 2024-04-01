@@ -18,6 +18,7 @@ Emit JSON (or CSV or Shapefile or GeoJSON or ....)
 Web pages:
 static page. What we'll use.
 Aside: dynamic page. Use requests-html or Selenium for these.
+"tag soup"
 
 Web page/HTML structure. DOM, page elements.
 Look at W3 schools
