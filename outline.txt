@@ -13,6 +13,9 @@ Web page/HTML structure
 Look at W3 schools
 * [HTML Tables](https://www.w3schools.com/html/html\_tables.asp)
 * [HTML id Attribute](https://www.w3schools.com/tags/att\_id.asp)
+https://www.w3schools.com/python/python_lists.asp
+https://www.w3resource.com/python-exercises/list/python-data-type-list-exercise-269.php#:~:text=Python%20Code%3A,a%20step%20of%20'nth'.
+
 Quick look at the SFD page
 
 Just enough Python
