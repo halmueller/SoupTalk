@@ -1,25 +1,27 @@
 Problem statement
-Samples: official SFD page, NRHP updates, sfdlive.com
-Scraping vs API: Seattle official page, seattle.data.gov, sfdlive.com
+Samples: official SFD page, sfdlive.com, NRHP updates
+Scraping vs API: Seattle Fire official page, seattle.data.gov, sfdlive.com, Wikipedia API
+Scraping is messy, brittle
 
 Alice in Wonderland
 
-Just enough Python
-environment
+Web pages:
+static page. What we'll use.
+Aside: dynamic page. Use requests-html or Selenium for these.
 
 Web page/HTML structure
+Look at W3 schools
+* [HTML Tables](https://www.w3schools.com/html/html\_tables.asp)
+* [HTML id Attribute](https://www.w3schools.com/tags/att\_id.asp)
+Quick look at the SFD page
 
-Walk through the SFD page
-
-
-
+Just enough Python
+environment
 
 Setup:
 install Python3 and virtual environment
 in venv, install BS4 and Requests
 run the check_install script
 
-Web pages:
-static page. What we'll use.
-Aside: dynamic page. Use requests-html or Selenium for these.
-
+Exploration/prospecting: 
+Step-by-step dissection of the SFD page

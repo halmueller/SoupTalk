@@ -8,8 +8,12 @@ https://web.seattle.gov/sfd/realtime911/
 https://web.seattle.gov/sfd/realtime911/getRecsForDatePub.asp?incDate=03%2F29%2F2024&rad1=des
 https://data.seattle.gov/Public-Safety/Seattle-Real-Time-Fire-911-Calls/kzjm-xkqj/data
 
+https://www.nps.gov/subjects/nationalregister/weekly-list-2024-03-29.htm
+
 Lobster Quadrille
 https://www.cs.cmu.edu/~rgs/alice-X.html
+
+https://beautiful-soup-4.readthedocs.io/en/latest/#
 
 Environment:
 See https://stackoverflow.com/questions/75608323/how-do-i-solve-error-externally-managed-environment-every-time-i-use-pip-3 
