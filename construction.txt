@@ -1,3 +1,5 @@
+Room note: screen is 1 1/2 thumbs high from back of room
+
 Setup:
 install Python3 and virtual environment
 in venv, install BS4 and Requests
@@ -9,6 +11,8 @@ https://web.seattle.gov/sfd/realtime911/getRecsForDatePub.asp?incDate=03%2F29%2F
 https://data.seattle.gov/Public-Safety/Seattle-Real-Time-Fire-911-Calls/kzjm-xkqj/data
 
 https://www.nps.gov/subjects/nationalregister/weekly-list-2024-03-29.htm
+
+Geocoder: https://geopy.readthedocs.io/en/stable/#module-geopy.geocoders
 
 Lobster Quadrille
 https://www.cs.cmu.edu/~rgs/alice-X.html
