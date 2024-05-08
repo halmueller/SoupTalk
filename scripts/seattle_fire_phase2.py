@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup as bs
 import json
+from geopy.geocoders import Nominatim
 
 URL1 = "https://raw.githubusercontent.com/halmueller/SoupTalk/develop/html_samples/sfdApril01.html"
 URL2 = "https://raw.githubusercontent.com/halmueller/SoupTalk/develop/html_samples/sfdMarch31.html"
@@ -9,6 +10,8 @@ page = requests.get(URL1)
 soup = bs(page.content, "html.parser")
 
 tables = soup.find_all("table")
+# print(len(tables))
+# print(tables[3])
 
 geolocator = Nominatim(user_agent="SoupPractice.hal")
 
@@ -16,6 +19,7 @@ geolocator = Nominatim(user_agent="SoupPractice.hal")
 incidents = []
 for callRow in tables[3].find_all("tr"):
     fields = callRow.find_all("td")
+#    print(fields[4].text)
     row_result = {
         "date" : fields[0].text,
         "incident" : fields[1].text,
@@ -28,9 +32,12 @@ for callRow in tables[3].find_all("tr"):
         row_result["status"] = "closed"
     else:
         row_result["status"] = "open"
+#    print(row_result)
     incidents.append(row_result)
 
 print(incidents)
 
+json_out = json.dumps(incidents)
+print(json_out)
 
 

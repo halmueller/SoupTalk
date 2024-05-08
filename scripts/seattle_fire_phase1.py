@@ -6,14 +6,11 @@ URL1 = "https://raw.githubusercontent.com/halmueller/SoupTalk/develop/html_sampl
 URL2 = "https://raw.githubusercontent.com/halmueller/SoupTalk/develop/html_samples/sfdMarch31.html"
 page = requests.get(URL1)
 
-#print(page.text)
-
 soup = bs(page.content, "html.parser")
-#print(soup.prettify)
 
 tables = soup.find_all("table")
-print(len(tables))
-print(tables[3])
+# print(len(tables))
+# print(tables[3])
 
 # a more Pythonic approach would be a list comprehension
 incidents = []
