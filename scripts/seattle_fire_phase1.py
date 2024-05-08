@@ -32,6 +32,7 @@ for callRow in tables[3].find_all("tr"):
 #    print(row_result)
     incidents.append(row_result)
 
+# Note: multiple entries for an incident number create multiple list entries.
 print(incidents)
 
 json_out = json.dumps(incidents)

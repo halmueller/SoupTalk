@@ -13,7 +13,7 @@ tables = soup.find_all("table")
 # print(len(tables))
 # print(tables[3])
 
-geolocator = Nominatim(user_agent="SoupPractice.hal")
+geocoder = Nominatim(user_agent="SoupPractice.hal")
 
 # a more Pythonic approach would be a list comprehension
 incidents = []
@@ -32,12 +32,14 @@ for callRow in tables[3].find_all("tr"):
         row_result["status"] = "closed"
     else:
         row_result["status"] = "open"
-#    print(row_result)
+    location = geocoder.geocode(row_result["address"]+", Seattle, WA")
+    row_result["latitude"] = location.latitude
+    row_result["longitude"] = location.longitude
+    # Geocoder timeouts: see https://gis.stackexchange.com/a/184376
     incidents.append(row_result)
 
-print(incidents)
+# Note: multiple entries for an incident number create multiple list entries.
+# print(incidents)
 
 json_out = json.dumps(incidents)
-print(json_out)
-
-
+ print(json_out)
