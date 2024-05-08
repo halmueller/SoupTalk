@@ -1,0 +1,22 @@
+How To Prepare
+
+Please install:
+Google Chrome, 
+Anaconda, available at https://www.anaconda.com/download
+A text editor you like: perhaps Emacs, Vim, VS Code, or TextEdit.
+
+Anaconda is a Python package management and Python installation. You
+might already have installed a different Python interpreter and
+package manager that you like, and it's perfectly fine to stick with
+that one. I'll use the Anaconda distribution for the tutorial, for the
+sake of simplifying the examples, but you can use a different Python
+setup if you prefer.
+
+I specify Google Chrome because of its support for inspecting
+internals of web pages. Safari, Firefox, and Edge offer these
+capabilities too. I'll be using Chrome for simplicity,
+
+Check: Launch the Anaconda-Navigator from the Applications folder on your
+Mac or the Start button on your Windows machine. If you can launch
+Anaconda-Navigator, you're ready to roll.
+

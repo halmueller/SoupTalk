@@ -6,10 +6,10 @@ from bs4 import BeautifulSoup as bs
 URL = "https://realpython.github.io/fake-jobs/"
 page = requests.get(URL)
 
-# print(page.text)
+print(page.text)
 
 soup = bs(page.content, "html.parser")
-#print(soup)
+print(soup)
 
 results = soup.find(id="ResultsContainer")
 print(results.prettify)

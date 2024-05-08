@@ -3,10 +3,11 @@ from bs4 import BeautifulSoup as bs
 
 
 # URL = "https://web.seattle.gov/sfd/realtime911/getRecsForDatePub.asp?action=Today&incDate=&rad1=des"
-URL = "https://raw.githubusercontent.com/halmueller/SoupTalk/develop/html_samples/sfdMarch31.html"
-page = requests.get(URL)
+URL1 = "https://raw.githubusercontent.com/halmueller/SoupTalk/develop/html_samples/sfdApril01.html"
+URL2 = "https://raw.githubusercontent.com/halmueller/SoupTalk/develop/html_samples/sfdMarch31.html"
+page = requests.get(URL1)
 
-# print(page.text)
+#print(page.text)
 
 soup = bs(page.content, "html.parser")
 #print(soup.prettify)
@@ -15,7 +16,19 @@ tables = soup.find_all("table")
 print(len(tables))
 print(tables[3])
 
-#for tag in soup.find_all("table"):
+for callRow in tables[3].find_all("tr"):
+    fields = callRow.find_all("td")
+#    print(fields[4].text)
+    result = {
+        "date" : fields[0].text,
+        "incident" : fields[1].text,
+        # ignore Level, don't know what it means
+        "units" : fields[3].text,
+        "address" : fields[4].text,
+        "types" : fields[5].text,
+        }
+    print(result)
+
 #    print("------------------------------------------------------------------------------------------------")
 #    print(len(tuple(tag.children)))
 #    print(tag.prettify)

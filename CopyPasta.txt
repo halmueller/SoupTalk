@@ -1,0 +1,17 @@
+Download:
+https://www.anaconda.com/download
+https://www.google.com/chrome/
+
+Links:
+Python 3, BeautifulSoup4 4.12.3:  https://pypi.org/project/beautifulsoup4/
+“Tag soup”: https://en.wikipedia.org/wiki/Tag_soup 
+https://en.wikipedia.org/wiki/Beautiful_Soup_(HTML_parser)
+Leonard Richardson + Tidelift: https://www.crummy.com/software/BeautifulSoup/
+
+Demo:
+https://sfdlive.com/
+https://web.seattle.gov/sfd/realtime911/
+https://data.seattle.gov/Public-Safety/Seattle-Real-Time-Fire-911-Calls/kzjm-xkqj/data
+
+https://raw.githubusercontent.com/halmueller/SoupTalk/develop/html_samples/sfdMarch31.html
+
