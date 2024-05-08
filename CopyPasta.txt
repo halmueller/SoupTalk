@@ -14,4 +14,6 @@ https://web.seattle.gov/sfd/realtime911/
 https://data.seattle.gov/Public-Safety/Seattle-Real-Time-Fire-911-Calls/kzjm-xkqj/data
 
 https://raw.githubusercontent.com/halmueller/SoupTalk/develop/html_samples/sfdMarch31.html
+https://raw.githubusercontent.com/halmueller/SoupTalk/develop/html_samples/sfdMarch31.html
+https://web.seattle.gov/sfd/realtime911/getRecsForDatePub.asp?action=Today&incDate=&rad1=des"
 
