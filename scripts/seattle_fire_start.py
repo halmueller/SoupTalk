@@ -2,14 +2,11 @@ import requests
 from bs4 import BeautifulSoup as bs
 
 
-# URL = "https://example.com"
-URL = "https://realpython.github.io/fake-jobs/"
-page = requests.get(URL)
+URL1 = "https://raw.githubusercontent.com/halmueller/SoupTalk/develop/html_samples/sfdApril01.html"
+URL2 = "https://raw.githubusercontent.com/halmueller/SoupTalk/develop/html_samples/sfdMarch31.html"
+page = requests.get(URL1)
 
 print(page.text)
 
 soup = bs(page.content, "html.parser")
-print(soup)
-
-results = soup.find(id="ResultsContainer")
-print(results.prettify)
+print(soup.prettify)
