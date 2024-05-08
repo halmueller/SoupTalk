@@ -5,6 +5,7 @@ from geopy.geocoders import Nominatim
 
 URL1 = "https://raw.githubusercontent.com/halmueller/SoupTalk/develop/html_samples/sfdApril01.html"
 URL2 = "https://raw.githubusercontent.com/halmueller/SoupTalk/develop/html_samples/sfdMarch31.html"
+URL3 = "https://web.seattle.gov/sfd/realtime911/getRecsForDatePub.asp?action=Today&incDate=&rad1=des"
 page = requests.get(URL1)
 
 soup = bs(page.content, "html.parser")
@@ -32,14 +33,14 @@ for callRow in tables[3].find_all("tr"):
         row_result["status"] = "closed"
     else:
         row_result["status"] = "open"
+    # Geocoder timeouts not handled: see https://gis.stackexchange.com/a/184376 for an approach
     location = geocoder.geocode(row_result["address"]+", Seattle, WA")
     row_result["latitude"] = location.latitude
     row_result["longitude"] = location.longitude
-    # Geocoder timeouts: see https://gis.stackexchange.com/a/184376
+    if location.raw["name"]:
+        row_result["name"] = location.raw["name"]
     incidents.append(row_result)
-
 # Note: multiple entries for an incident number create multiple list entries.
-# print(incidents)
 
-json_out = json.dumps(incidents)
- print(json_out)
+json_out = json.dumps(incidents, indent=2)
+print(json_out)

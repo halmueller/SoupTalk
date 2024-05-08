@@ -4,6 +4,7 @@ import json
 
 URL1 = "https://raw.githubusercontent.com/halmueller/SoupTalk/develop/html_samples/sfdApril01.html"
 URL2 = "https://raw.githubusercontent.com/halmueller/SoupTalk/develop/html_samples/sfdMarch31.html"
+URL3 = "https://web.seattle.gov/sfd/realtime911/getRecsForDatePub.asp?action=Today&incDate=&rad1=des"
 page = requests.get(URL1)
 
 soup = bs(page.content, "html.parser")
@@ -31,8 +32,8 @@ for callRow in tables[3].find_all("tr"):
         row_result["status"] = "open"
 #    print(row_result)
     incidents.append(row_result)
-
 # Note: multiple entries for an incident number create multiple list entries.
+
 print(incidents)
 
 json_out = json.dumps(incidents)
